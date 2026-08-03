@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EMBER — Loading</title>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700;9..144,900&family=Inter+Tight:wght@400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      background-color: #0E0C0B;
+      color: #F4EDE4;
+      font-family: 'Inter Tight', sans-serif;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+    .loader-wrap {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 32px;
+      animation: fadeUp 0.7s ease both;
+    }
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(16px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    .brand {
+      font-family: 'Fraunces', serif;
+      font-size: 42px;
+      font-weight: 900;
+      letter-spacing: -1px;
+      color: #F4EDE4;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .ember-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background-color: #D9662C;
+      box-shadow: 0 0 8px 3px rgba(217,102,44,0.6);
+      animation: pulse 2.8s ease-in-out infinite;
+      flex-shrink: 0;
+    }
+    @keyframes pulse {
+      50% { box-shadow: 0 0 14px 6px rgba(217,102,44,0.8); }
+    }
+    .spinner-wrap {
+      position: relative;
+      width: 64px;
+      height: 64px;
+    }
+    .spinner-wrap::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: 50%;
+      border: 2px solid rgba(244, 237, 228, 0.08);
+    }
+    .spinner {
+      position: absolute;
+      inset: 0;
+      border-radius: 50%;
+      border: 2px solid transparent;
+      border-top-color: #D9662C;
+      border-right-color: rgba(217,102,44,0.35);
+      animation: spin 0.9s linear infinite;
+    }
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+    .tagline {
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: #8C8175;
+      animation: fadeUp 0.7s 0.3s ease both;
+    }
+    .progress-bar {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      height: 2px;
+      background-color: #D9662C;
+      box-shadow: 0 0 8px rgba(217,102,44,0.6);
+      width: 0%;
+      animation: fillBar 2.4s ease-in-out forwards;
+    }
+    @keyframes fillBar {
+      to { width: 100%; }
+    }
+    body.fade-out {
+      animation: fadeOut 0.35s ease forwards;
+    }
+    @keyframes fadeOut {
+      to { opacity: 0; }
+    }
+  </style>
+</head>
+<body>
+  <div class="loader-wrap">
+    <div class="brand">
+      EMBER
+    </div>
+    <div class="spinner-wrap">
+      <div class="spinner"></div>
+    </div>
+    <p class="tagline">Crafted for your cravings</p>
+  </div>
+  <div class="progress-bar"></div>
+  <script>
+    setTimeout(function () {
+      document.body.classList.add('fade-out');          
+      setTimeout(function () {
+        window.location.href = 'index.html';          
+      }, 350);                                        
+    }, 2750);
+  </script>
+</body>
+</html>
