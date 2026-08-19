@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EMBER — Crafted for your cravings</title>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700;9..144,900&family=Inter+Tight:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="nav">
+  <a href="#" class="wordmark">EMBER</a>
+  <div class="nav-links">
+    <a href="#">Home</a>
+    <a href="#explore">Explore</a>
+    <a href="#restaurants">Restaurants</a>
+    <a href="#offer">Offers</a>
+  </div>
+  <div class="nav-right">
+
+    <!-- Veg / Non-Veg Toggle -->
+    <div class="veg-toggle" id="vegToggle" onclick="toggleVeg()" title="Toggle Veg / Non-Veg">
+      <span class="veg-toggle__label" id="vegLabel">Veg</span>
+      <div class="veg-toggle__track" id="vegTrack">
+        <div class="veg-toggle__thumb"></div>
+      </div>
+      <span class="veg-toggle__label" id="nonvegLabel" style="opacity:.4">Non-veg</span>
+    </div>
+
+    <button aria-label="Search" style="color:var(--muted);display:flex;align-items:center;transition:color 150ms" onmouseover="this.style.color='var(--ivory)'" onmouseout="this.style.color='var(--muted)'">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+        <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+      </svg>
+    </button>
+    <a href="#" class="btn btn-primary">Order now</a>
+
+    <!-- Dark / Light theme toggle -->
+    <button class="theme-toggle" id="themeToggle" onclick="toggleTheme()" title="Toggle theme" aria-label="Toggle theme">
+      ☼
+    </button>
+
+    <!-- Hamburger — visible on mobile only -->
+    <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Toggle menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+  </div>
+</nav>
+
+<!-- Mobile nav drawer -->
+<div class="mobile-nav" id="mobileNav">
+  <a href="#"            onclick="toggleMenu()">Home</a>
+  <a href="#explore"     onclick="toggleMenu()">Explore</a>
+  <a href="#restaurants" onclick="toggleMenu()">Restaurants</a>
+  <a href="#offer"       onclick="toggleMenu()">Offers</a>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-content">
+    <p class="eyebrow">Order from 500+ restaurants</p>
+    <h1><span>Craving something</span><span>delicious?</span></h1>
+    <p class="hero-sub">Biryani, Burgers, Pizza, Chinese — order anything you want, delivered fresh to your door.</p>
+    <div class="btn-row">
+      <a href="#explore" class="btn btn-primary">Order now</a>
+      <a href="#restaurants" class="btn btn-ghost">Browse restaurants</a>
+    </div>
+  </div>
+  <div class="hero-img-wrap">
+    <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=900&q=85&auto=format&fit=crop" alt="Signature Burger" />
+    <div class="badges">
+      <span class="badge">⭐ 4.9 rated</span>
+      <span class="badge">🕐 20–40 min delivery</span>
+      <span class="badge">🔥 50,000+ orders today</span>
+    </div>
+    <canvas id="heroCanvas"></canvas>
+  </div>
+</section>
+
+<!-- CATEGORIES -->
+<section class="section" id="explore">
+  <p class="eyebrow">What are you craving?</p>
+  <div class="cat-strip">
+    <div class="cat-card wide">
+      <div class="img-box"><img src="https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=600&q=80&auto=format&fit=crop" alt="Biryani" loading="lazy" /></div>
+      <span class="cat-name">Biryani</span>
+    </div>
+    <div class="cat-card">
+      <div class="img-box"><img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?w=400&q=80&auto=format&fit=crop" alt="Pizza" loading="lazy" /></div>
+      <span class="cat-name">Pizza</span>
+    </div>
+    <div class="cat-card tall">
+      <div class="img-box"><img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=400&q=80&auto=format&fit=crop" alt="Burgers" loading="lazy" /></div>
+      <span class="cat-name">Burgers</span>
+    </div>
+    <div class="cat-card">
+      <div class="img-box"><img src="https://images.unsplash.com/photo-1588166524941-3bf61a9c41db?w=400&q=80&auto=format&fit=crop" alt="North Indian" loading="lazy" /></div>
+      <span class="cat-name">North Indian</span>
+    </div>
+    <div class="cat-card">
+      <div class="img-box"><img src="https://images.unsplash.com/photo-1569050467447-ce54b3bbc37d?w=400&q=80&auto=format&fit=crop" alt="Sushi" loading="lazy" /></div>
+      <span class="cat-name">Sushi</span>
+    </div>
+    <div class="cat-card narrow">
+      <div class="img-box"><img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?w=300&q=80&auto=format&fit=crop" alt="Street Food" loading="lazy" /></div>
+      <span class="cat-name">Street Food</span>
+    </div>
+    <div class="cat-card">
+      <div class="img-box"><img src="https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?w=400&q=80&auto=format&fit=crop" alt="Pasta" loading="lazy" /></div>
+      <span class="cat-name">Pasta</span>
+    </div>
+    <div class="cat-card">
+      <div class="img-box"><img src="https://images.unsplash.com/photo-1551024601-bec78aea704b?w=400&q=80&auto=format&fit=crop" alt="Desserts" loading="lazy" /></div>
+      <span class="cat-name">Desserts</span>
+    </div>
+    <div class="cat-card">
+      <div class="img-box"><img src="https://images.unsplash.com/photo-1567188040759-fb8a883dc6d8?w=400&q=80&auto=format&fit=crop" alt="Tandoor" loading="lazy" /></div>
+      <span class="cat-name">Tandoor</span>
+    </div>
+    <div class="cat-card narrow">
+      <div class="img-box"><img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=300&q=80&auto=format&fit=crop" alt="Healthy" loading="lazy" /></div>
+      <span class="cat-name">Healthy</span>
+    </div>
+  </div>
+</section>
+
+<!-- POPULAR DISHES -->
+<section class="section">
+  <div class="section-head">
+    <h2 class="section-title">Most ordered</h2>
+    <a href="#" class="see-all">View all →</a>
+  </div>
+  <div class="dishes-grid">
+
+    <div class="dish-card featured">
+      <div class="img-box img-rel">
+        <img src="https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=700&q=85&auto=format&fit=crop" alt="Chicken Dum Biryani" loading="lazy" />
+        <span class="dish-tag">Best seller</span>
+      </div>
+      <div class="dish-body">
+        <h3 class="dish-name"><span class="dish-dot nonveg"></span>Chicken Dum Biryani</h3>
+        <p class="dish-desc">Slow-cooked basmati rice layered with spiced chicken, saffron & caramelised onions — sealed and dum-cooked over coal.</p>
+        <div class="meta-row">
+          <span class="price">₹349</span>
+          <span class="divider"></span>
+          <span class="rating">⭐ 4.9</span>
+          <span class="divider"></span>
+          <span class="orders">3,200+ orders</span>
+          <button class="add-btn">+</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="small-stack">
+      <div class="dish-card small">
+        <div class="img-box"><img src="https://images.unsplash.com/photo-1567188040759-fb8a883dc6d8?w=400&q=80&auto=format&fit=crop" alt="Butter Chicken" loading="lazy" /></div>
+        <div class="dish-body">
+          <h3 class="dish-name"><span class="dish-dot nonveg"></span>Butter Chicken</h3>
+          <p class="dish-desc">Tandoor-roasted chicken in rich tomato cream sauce, served with butter naan.</p>
+          <div class="meta-row"><span class="price">₹320</span><span class="divider"></span><span class="rating">⭐ 4.9</span><button class="add-btn">+</button></div>
+        </div>
+      </div>
+      <div class="dish-card small">
+        <div class="img-box"><img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?w=400&q=80&auto=format&fit=crop" alt="Margherita Pizza" loading="lazy" /></div>
+        <div class="dish-body">
+          <h3 class="dish-name"><span class="dish-dot veg"></span>Wood-fired Margherita</h3>
+          <p class="dish-desc">San Marzano tomatoes, fresh mozzarella, basil, olive oil.</p>
+          <div class="meta-row"><span class="price">₹399</span><span class="divider"></span><span class="rating">⭐ 4.8</span><button class="add-btn">+</button></div>
+        </div>
+      </div>
+      <div class="dish-card small">
+        <div class="img-box"><img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=400&q=80&auto=format&fit=crop" alt="Double Smash Burger" loading="lazy" /></div>
+        <div class="dish-body">
+          <h3 class="dish-name"><span class="dish-dot nonveg"></span>Double Smash Burger</h3>
+          <p class="dish-desc">Double smashed patty, American cheese, pickles, secret sauce.</p>
+          <div class="meta-row"><span class="price">₹299</span><span class="divider"></span><span class="rating">⭐ 4.7</span><button class="add-btn">+</button></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- RESTAURANTS -->
+<section class="section" id="restaurants">
+  <div class="section-head">
+    <h2 class="section-title">Top restaurants near you</h2>
+    <a href="#" class="see-all">All restaurants →</a>
+  </div>
+  <div class="rest-grid">
+    <div class="rest-card offset">
+      <div class="img-box"><img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=600&q=80&auto=format&fit=crop" alt="Dum Pukht" loading="lazy" /></div>
+      <div class="rest-body"><h3 class="rest-name">Dum Pukht</h3><p class="rest-cuisine">North Indian · Mughlai · Biryani</p><div class="rest-info"><span class="rating">★ 4.9</span> · <span>20–30 min</span> · <span>Free delivery</span></div></div>
+    </div>
+    <div class="rest-card">
+      <div class="img-box"><img src="https://images.unsplash.com/photo-1537047902294-62a40c20a6ae?w=600&q=80&auto=format&fit=crop" alt="The Burger Lab" loading="lazy" /></div>
+      <div class="rest-body"><h3 class="rest-name">The Burger Lab</h3><p class="rest-cuisine">Burgers · American · Shakes</p><div class="rest-info"><span class="rating">★ 4.8</span> · <span>25–35 min</span> · <span>₹30 delivery</span></div></div>
+    </div>
+    <div class="rest-card wide offset">
+      <div class="img-box"><img src="https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?w=700&q=80&auto=format&fit=crop" alt="Wok & Roll" loading="lazy" /></div>
+      <div class="rest-body"><h3 class="rest-name">Wok & Roll</h3><p class="rest-cuisine">Chinese · Pan Asian · Sushi</p><div class="rest-info"><span class="rating">★ 4.7</span> · <span>30–40 min</span> · <span>Free delivery</span></div></div>
+    </div>
+    <div class="rest-card">
+      <div class="img-box"><img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=600&q=80&auto=format&fit=crop" alt="Pizza Republic" loading="lazy" /></div>
+      <div class="rest-body"><h3 class="rest-name">Pizza Republic</h3><p class="rest-cuisine">Pizza · Italian · Pasta</p><div class="rest-info"><span class="rating">★ 4.8</span> · <span>20–30 min</span> · <span>₹20 delivery</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- OFFER -->
+<section class="offer" id="offer">
+  <div class="offer-bg">
+    <img src="https://images.unsplash.com/photo-1544025162-d76694265947?w=1600&q=80&auto=format&fit=crop" alt="" loading="lazy" />
+  </div>
+  <canvas id="offerCanvas"></canvas>
+  <div class="offer-content">
+    <p class="eyebrow" style="color:var(--muted)">Limited time</p>
+    <div class="offer-num">40%</div>
+    <h2 class="offer-title">Off your first order.</h2>
+    <p class="offer-sub">Use code <strong>EMBER40</strong> at checkout. Valid this weekend only.</p>
+    <a href="#" class="btn btn-primary">Claim offer</a>
+  </div>
+</section>
+
+<!-- WHY EMBER -->
+<section class="why">
+  <h2 class="section-title">Why Ember</h2>
+  <div class="why-grid">
+    <div class="why-item">
+      <span class="why-num">01</span>
+      <div><h3 class="why-title">Fire is the ingredient.</h3><p class="why-body">Every dish on Ember is cooked over live flame, wood fire, or glowing coal. The heat isn't incidental — it's the method, and the flavour is proof.</p></div>
+    </div>
+    <div class="why-item">
+      <span class="why-num">02</span>
+      <div><h3 class="why-title">Sourced with intention.</h3><p class="why-body">We partner only with kitchens that name their suppliers. Grass-fed, line-caught, small-batch — the provenance is on the label because it matters.</p></div>
+    </div>
+    <div class="why-item">
+      <span class="why-num">03</span>
+      <div><h3 class="why-title">Delivered at its best.</h3><p class="why-body">Packaging engineered to hold heat and texture. If it's meant to arrive hot and crisp, it does. We tested every container before we shipped a single order.</p></div>
+    </div>
+    <div class="why-item">
+      <span class="why-num">04</span>
+      <div><h3 class="why-title">No compromise, no filler.</h3><p class="why-body">No promoted listings. No paid placement. Every restaurant here earned its position by the quality of what comes out of the kitchen.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top">
+    <div>
+      <div class="footer-wordmark"><span class="ember-dot"></span> EMBER</div>
+      <p class="footer-tagline">Fire-crafted delivery, since 2023.</p>
+    </div>
+    <div class="footer-nav">
+      <div><p class="col-head">Discover</p><ul><li><a href="#">Restaurants</a></li><li><a href="#">Signature dishes</a></li><li><a href="#">Offers</a></li><li><a href="#">Gift cards</a></li></ul></div>
+      <div><p class="col-head">Company</p><ul><li><a href="#">About us</a></li><li><a href="#">Careers</a></li><li><a href="#">Press</a></li><li><a href="#">Blog</a></li></ul></div>
+      <div><p class="col-head">Support</p><ul><li><a href="#">Help centre</a></li><li><a href="#">Track order</a></li><li><a href="#">Accessibility</a></li><li><a href="#">Contact</a></li></ul></div>
+      <div><p class="col-head">Partners</p><ul><li><a href="#">List your restaurant</a></li><li><a href="#">Become a rider</a></li><li><a href="#">Corporate orders</a></li><li><a href="#">API</a></li></ul></div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 Ember Technologies Inc. All rights reserved.</p>
+    <div class="legal-links"><a href="#">Privacy</a><a href="#">Terms</a><a href="#">Cookies</a></div>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>
