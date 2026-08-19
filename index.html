@@ -18,7 +18,7 @@
     <a href="#restaurants">Restaurants</a>
     <a href="#offer">Offers</a>
   </div>
-  <div style="display:flex;align-items:center;gap:1.25rem;margin-left:auto">
+  <div class="nav-right">
 
     <!-- Veg / Non-Veg Toggle -->
     <div class="veg-toggle" id="vegToggle" onclick="toggleVeg()" title="Toggle Veg / Non-Veg">
@@ -35,8 +35,29 @@
       </svg>
     </button>
     <a href="#" class="btn btn-primary">Order now</a>
+
+    <!-- Dark / Light theme toggle -->
+    <button class="theme-toggle" id="themeToggle" onclick="toggleTheme()" title="Toggle theme" aria-label="Toggle theme">
+      ☼
+    </button>
+
+    <!-- Hamburger — visible on mobile only -->
+    <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Toggle menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
   </div>
 </nav>
+
+<!-- Mobile nav drawer -->
+<div class="mobile-nav" id="mobileNav">
+  <a href="#"            onclick="toggleMenu()">Home</a>
+  <a href="#explore"     onclick="toggleMenu()">Explore</a>
+  <a href="#restaurants" onclick="toggleMenu()">Restaurants</a>
+  <a href="#offer"       onclick="toggleMenu()">Offers</a>
+</div>
 
 <!-- HERO -->
 <section class="hero">
@@ -208,21 +229,23 @@
 <!-- WHY EMBER -->
 <section class="why">
   <h2 class="section-title">Why Ember</h2>
-  <div class="why-item">
-    <span class="why-num">01</span>
-    <div><h3 class="why-title">Fire is the ingredient.</h3><p class="why-body">Every dish on Ember is cooked over live flame, wood fire, or glowing coal. The heat isn't incidental — it's the method, and the flavour is proof.</p></div>
-  </div>
-  <div class="why-item">
-    <span class="why-num">02</span>
-    <div><h3 class="why-title">Sourced with intention.</h3><p class="why-body">We partner only with kitchens that name their suppliers. Grass-fed, line-caught, small-batch — the provenance is on the label because it matters.</p></div>
-  </div>
-  <div class="why-item">
-    <span class="why-num">03</span>
-    <div><h3 class="why-title">Delivered at its best.</h3><p class="why-body">Packaging engineered to hold heat and texture. If it's meant to arrive hot and crisp, it does. We tested every container before we shipped a single order.</p></div>
-  </div>
-  <div class="why-item">
-    <span class="why-num">04</span>
-    <div><h3 class="why-title">No compromise, no filler.</h3><p class="why-body">No promoted listings. No paid placement. Every restaurant here earned its position by the quality of what comes out of the kitchen.</p></div>
+  <div class="why-grid">
+    <div class="why-item">
+      <span class="why-num">01</span>
+      <div><h3 class="why-title">Fire is the ingredient.</h3><p class="why-body">Every dish on Ember is cooked over live flame, wood fire, or glowing coal. The heat isn't incidental — it's the method, and the flavour is proof.</p></div>
+    </div>
+    <div class="why-item">
+      <span class="why-num">02</span>
+      <div><h3 class="why-title">Sourced with intention.</h3><p class="why-body">We partner only with kitchens that name their suppliers. Grass-fed, line-caught, small-batch — the provenance is on the label because it matters.</p></div>
+    </div>
+    <div class="why-item">
+      <span class="why-num">03</span>
+      <div><h3 class="why-title">Delivered at its best.</h3><p class="why-body">Packaging engineered to hold heat and texture. If it's meant to arrive hot and crisp, it does. We tested every container before we shipped a single order.</p></div>
+    </div>
+    <div class="why-item">
+      <span class="why-num">04</span>
+      <div><h3 class="why-title">No compromise, no filler.</h3><p class="why-body">No promoted listings. No paid placement. Every restaurant here earned its position by the quality of what comes out of the kitchen.</p></div>
+    </div>
   </div>
 </section>
 

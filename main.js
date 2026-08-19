@@ -9,6 +9,51 @@ window.onscroll = function() {
 };
 
 
+// === DARK / LIGHT THEME TOGGLE ===
+function toggleTheme() {
+  var body   = document.body;
+  var btn    = document.getElementById('themeToggle');
+  var isLight = body.classList.toggle('light');
+
+  // Swap icon: sun = currently dark (click to go light), moon = currently light (click to go dark)
+  btn.textContent = isLight ? '☾' : '☼';
+
+  // Remember preference so it survives page refresh
+  localStorage.setItem('ember-theme', isLight ? 'light' : 'dark');
+}
+
+// Apply saved theme on load
+(function () {
+  var saved = localStorage.getItem('ember-theme');
+  if (saved === 'light') {
+    document.body.classList.add('light');
+    var btn = document.getElementById('themeToggle');
+    if (btn) btn.textContent = '☾';
+  }
+})();
+
+
+// === HAMBURGER MENU TOGGLE (mobile) ===
+function toggleMenu() {
+  var hamburger = document.getElementById('hamburger');
+  var mobileNav = document.getElementById('mobileNav');
+  hamburger.classList.toggle('open');
+  mobileNav.classList.toggle('open');
+}
+
+// Close mobile menu when user scrolls (UX quality of life)
+window.addEventListener('scroll', function () {
+  var hamburger = document.getElementById('hamburger');
+  var mobileNav = document.getElementById('mobileNav');
+  if (mobileNav && mobileNav.classList.contains('open')) {
+    hamburger.classList.remove('open');
+    mobileNav.classList.remove('open');
+  }
+});
+
+
+
+
 // === EMBER PARTICLES ===
 function runEmbers(canvasId, count, delay) {
   setTimeout(function() {
