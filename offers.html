@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Deals & Offers — EMBER</title>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700;9..144,900&family=Inter+Tight:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- THEME CHECKBOX (hidden) -->
+<input type="checkbox" id="themeCheck" class="theme-check" />
+
+<!-- MENU CHECKBOX (hidden) -->
+<input type="checkbox" id="menuCheck" class="menu-check" />
+
+<!-- NAV -->
+<nav id="nav">
+  <a href="index.html" class="wordmark">EMBER</a>
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="explore.html">Explore</a>
+    <a href="restaurants.html">Restaurants</a>
+    <a href="offers.html" class="active">Offers</a>
+  </div>
+
+  <!-- Search input (pure HTML/CSS) -->
+  <div class="nav-search-box">
+    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+      <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+    </svg>
+    <input type="text" placeholder="Search coupons & deals..." aria-label="Search offers" />
+  </div>
+
+  <div class="nav-right">
+
+    <!-- Veg / Non-Veg Toggle — Pure CSS -->
+    <label class="veg-toggle" title="Toggle Veg / Non-Veg">
+      <input type="checkbox" id="vegCheck" class="veg-check" />
+      <span class="veg-toggle__label veg-label-text">Veg</span>
+      <div class="veg-toggle__track">
+        <div class="veg-toggle__thumb"></div>
+      </div>
+      <span class="veg-toggle__label nonveg-label-text">Non-veg</span>
+    </label>
+
+    <!-- Profile Icon on Right -->
+    <a href="profile.html" class="nav-profile-btn" title="My Profile" aria-label="Profile">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="10"></circle>
+        <circle cx="12" cy="10" r="3.2"></circle>
+        <path d="M6.2 18.8C7.5 16.5 9.6 15.2 12 15.2C14.4 15.2 16.5 16.5 17.8 18.8"></path>
+      </svg>
+    </a>
+
+    <a href="explore.html" class="btn btn-primary">Order now</a>
+
+    <!-- Hamburger -->
+    <label for="menuCheck" class="hamburger" aria-label="Toggle menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+
+  </div>
+</nav>
+
+<!-- Mobile nav drawer -->
+<div class="mobile-nav" id="mobileNav">
+  <a href="index.html">Home</a>
+  <a href="explore.html">Explore</a>
+  <a href="restaurants.html">Restaurants</a>
+  <a href="offers.html" class="active">Offers</a>
+  <a href="profile.html">Profile</a>
+  <a href="login.html">Sign In</a>
+</div>
+
+<!-- FLOATING QUICK CART PILL -->
+<a href="offers.html" class="floating-cart" title="View Cart">
+  <div class="cart-left">
+    <span class="cart-icon">🛒</span>
+    <div class="cart-text">
+      <span class="cart-count">2 Items Added</span>
+      <span class="cart-price">₹669</span>
+    </div>
+  </div>
+  <span class="cart-cta">Checkout →</span>
+</a>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <p class="eyebrow">Deals & Coupons</p>
+  <h1>Exclusive Offers & Promos</h1>
+  <p class="hero-sub">Save big on your next feast with handpicked discount vouchers, weekend specials, and payment partner cashback.</p>
+</section>
+
+<!-- FEATURED BIG BANNER -->
+<section class="offer" style="margin: 0;">
+  <div class="offer-bg">
+    <img src="https://images.unsplash.com/photo-1544025162-d76694265947?w=1600&q=80&auto=format&fit=crop" alt="Offer background" loading="lazy" />
+  </div>
+  <div class="offer-content">
+    <p class="eyebrow">Weekend Special Promo</p>
+    <div class="offer-num">40%</div>
+    <h2 class="offer-title">Off your next feast.</h2>
+    <p class="offer-sub">Use coupon code <strong style="color:#D9662C; background:rgba(217,102,44,0.15); padding:2px 8px; border-radius:4px;">EMBER40</strong> at checkout. Valid on orders above ₹499.</p>
+    <a href="explore.html" class="btn btn-primary">Order Now & Save</a>
+  </div>
+</section>
+
+<!-- COUPON CODES GRID -->
+<section class="section">
+  <div class="section-head">
+    <h2 class="section-title">Available Coupons</h2>
+    <span class="eyebrow">Apply at checkout</span>
+  </div>
+
+  <div class="coupon-grid">
+
+    <!-- 1 -->
+    <div class="coupon-card">
+      <div class="coupon-top">
+        <div>
+          <div class="coupon-val">50% OFF</div>
+          <span style="font-size:11px; color:#8C8175; text-transform:uppercase; letter-spacing:1px;">Welcome Gift</span>
+        </div>
+        <span class="coupon-tag">FIRSTBITE</span>
+      </div>
+      <div class="coupon-info">
+        <h3 class="coupon-title">Flat 50% discount on 1st order</h3>
+        <p class="coupon-desc">Valid for all new users across any restaurant. Maximum discount up to ₹150.</p>
+      </div>
+      <div class="coupon-bottom">
+        <span>Min. order: ₹199</span>
+        <a href="explore.html" class="coupon-apply-btn">Use Code →</a>
+      </div>
+    </div>
+
+    <!-- 2 -->
+    <div class="coupon-card">
+      <div class="coupon-top">
+        <div>
+          <div class="coupon-val">40% OFF</div>
+          <span style="font-size:11px; color:#8C8175; text-transform:uppercase; letter-spacing:1px;">Weekend Special</span>
+        </div>
+        <span class="coupon-tag">EMBER40</span>
+      </div>
+      <div class="coupon-info">
+        <h3 class="coupon-title">40% OFF on all coal kitchens</h3>
+        <p class="coupon-desc">Applicable on Biryani, Burgers, Tandoor, and Wood-fired Pizzas. Max discount ₹200.</p>
+      </div>
+      <div class="coupon-bottom">
+        <span>Min. order: ₹499</span>
+        <a href="explore.html" class="coupon-apply-btn">Use Code →</a>
+      </div>
+    </div>
+
+    <!-- 3 -->
+    <div class="coupon-card">
+      <div class="coupon-top">
+        <div>
+          <div class="coupon-val">FREE</div>
+          <span style="font-size:11px; color:#8C8175; text-transform:uppercase; letter-spacing:1px;">Delivery Pass</span>
+        </div>
+        <span class="coupon-tag">FREEDEL</span>
+      </div>
+      <div class="coupon-info">
+        <h3 class="coupon-title">Zero Delivery Fee</h3>
+        <p class="coupon-desc">Enjoy free doorstep delivery on every order above ₹249 within 10 km.</p>
+      </div>
+      <div class="coupon-bottom">
+        <span>Min. order: ₹249</span>
+        <a href="explore.html" class="coupon-apply-btn">Use Code →</a>
+      </div>
+    </div>
+
+    <!-- 4 -->
+    <div class="coupon-card">
+      <div class="coupon-top">
+        <div>
+          <div class="coupon-val">₹300 OFF</div>
+          <span style="font-size:11px; color:#8C8175; text-transform:uppercase; letter-spacing:1px;">Party Feast</span>
+        </div>
+        <span class="coupon-tag">PARTYPACK</span>
+      </div>
+      <div class="coupon-info">
+        <h3 class="coupon-title">Flat ₹300 OFF on group orders</h3>
+        <p class="coupon-desc">Planning a gathering with family or friends? Save big on mega platters.</p>
+      </div>
+      <div class="coupon-bottom">
+        <span>Min. order: ₹999</span>
+        <a href="explore.html" class="coupon-apply-btn">Use Code →</a>
+      </div>
+    </div>
+
+    <!-- 5 -->
+    <div class="coupon-card">
+      <div class="coupon-top">
+        <div>
+          <div class="coupon-val">25% OFF</div>
+          <span style="font-size:11px; color:#8C8175; text-transform:uppercase; letter-spacing:1px;">Late Night Craving</span>
+        </div>
+        <span class="coupon-tag">MIDNIGHT</span>
+      </div>
+      <div class="coupon-info">
+        <h3 class="coupon-title">25% OFF between 11 PM – 4 AM</h3>
+        <p class="coupon-desc">Midnight hunger pangs? We've got you covered with hot food delivered late.</p>
+      </div>
+      <div class="coupon-bottom">
+        <span>Min. order: ₹299</span>
+        <a href="explore.html" class="coupon-apply-btn">Use Code →</a>
+      </div>
+    </div>
+
+    <!-- 6 -->
+    <div class="coupon-card">
+      <div class="coupon-top">
+        <div>
+          <div class="coupon-val">FREE ITEM</div>
+          <span style="font-size:11px; color:#8C8175; text-transform:uppercase; letter-spacing:1px;">Sweet Tooth</span>
+        </div>
+        <span class="coupon-tag">SWEETFEAST</span>
+      </div>
+      <div class="coupon-info">
+        <h3 class="coupon-title">Complimentary artisan dessert</h3>
+        <p class="coupon-desc">Get a free Basque Cheesecake slice or Shahi Tukda with any gourmet meal order.</p>
+      </div>
+      <div class="coupon-bottom">
+        <span>Min. order: ₹399</span>
+        <a href="explore.html" class="coupon-apply-btn">Use Code →</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- BANK OFFERS & PAYMENT DEALS -->
+<section class="section" style="background-color: #14100E; border-top: 1px solid #2A241F;">
+  <div class="section-head">
+    <h2 class="section-title">Bank & Wallet Offers</h2>
+    <span class="eyebrow">Instant checkout discount</span>
+  </div>
+  <div class="why-grid">
+    <div class="why-item">
+      <span class="why-num" style="font-size:32px;">💳</span>
+      <div>
+        <h3 class="why-title">HDFC Bank Credit Cards</h3>
+        <p class="why-body">Flat 15% instant discount up to ₹120 on all orders above ₹500 every Friday & Saturday.</p>
+      </div>
+    </div>
+    <div class="why-item">
+      <span class="why-num" style="font-size:32px;">🏦</span>
+      <div>
+        <h3 class="why-title">ICICI Bank NetBanking</h3>
+        <p class="why-body">Flat 10% instant discount up to ₹100 on orders above ₹400 every Sunday.</p>
+      </div>
+    </div>
+    <div class="why-item">
+      <span class="why-num" style="font-size:32px;">📱</span>
+      <div>
+        <h3 class="why-title">CRED UPI / Pay</h3>
+        <p class="why-body">Assured cashback between ₹25 to ₹100 on transactions completed via CRED Pay.</p>
+      </div>
+    </div>
+    <div class="why-item">
+      <span class="why-num" style="font-size:32px;">⚡</span>
+      <div>
+        <h3 class="why-title">Paytm & Google Pay</h3>
+        <p class="why-body">Earn scratch cards and reward vouchers up to ₹75 on UPI payments.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW TO REDEEM -->
+<section class="why">
+  <h2 class="section-title">How to Redeem</h2>
+  <div class="why-grid">
+    <div class="why-item">
+      <span class="why-num">01</span>
+      <div>
+        <h3 class="why-title">Choose your dishes</h3>
+        <p class="why-body">Browse through the explore catalog and add your favourite flame-crafted meals to your cart.</p>
+      </div>
+    </div>
+    <div class="why-item">
+      <span class="why-num">02</span>
+      <div>
+        <h3 class="why-title">Select or enter promo</h3>
+        <p class="why-body">Copy any coupon code above (e.g. <strong>EMBER40</strong>) and enter it in the coupon box.</p>
+      </div>
+    </div>
+    <div class="why-item">
+      <span class="why-num">03</span>
+      <div>
+        <h3 class="why-title">Enjoy instant discount</h3>
+        <p class="why-body">The discount applies immediately to your order total before payment.</p>
+      </div>
+    </div>
+    <div class="why-item">
+      <span class="why-num">04</span>
+      <div>
+        <h3 class="why-title">Fast, hot delivery</h3>
+        <p class="why-body">Sit back and relax while our heat-retaining packaging brings your meal hot & crisp in 20-35 mins.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top">
+    <div>
+      <div class="footer-wordmark"><span class="ember-dot"></span> EMBER</div>
+      <p class="footer-tagline">Fire-crafted delivery, since 2023.</p>
+    </div>
+    <div class="footer-nav">
+      <div><p class="col-head">Discover</p><ul><li><a href="restaurants.html">Restaurants</a></li><li><a href="explore.html">Signature dishes</a></li><li><a href="offers.html">Offers & Deals</a></li><li><a href="explore.html">Gift cards</a></li></ul></div>
+      <div><p class="col-head">Company</p><ul><li><a href="home.html">About us</a></li><li><a href="#">Careers</a></li><li><a href="#">Press</a></li><li><a href="#">Blog</a></li></ul></div>
+      <div><p class="col-head">Support</p><ul><li><a href="#">Help centre</a></li><li><a href="#">Track order</a></li><li><a href="#">Accessibility</a></li><li><a href="#">Contact</a></li></ul></div>
+      <div><p class="col-head">Partners</p><ul><li><a href="#">List your restaurant</a></li><li><a href="#">Become a rider</a></li><li><a href="#">Corporate orders</a></li><li><a href="#">API</a></li></ul></div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 Ember Technologies Inc. All rights reserved.</p>
+    <div class="legal-links"><a href="#">Privacy</a><a href="#">Terms</a><a href="#">Cookies</a></div>
+  </div>
+</footer>
+
+</body>
+</html>

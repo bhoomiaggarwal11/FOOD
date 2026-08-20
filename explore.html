@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Explore Menu — EMBER</title>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700;9..144,900&family=Inter+Tight:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- THEME CHECKBOX (hidden) -->
+<input type="checkbox" id="themeCheck" class="theme-check" />
+
+<!-- MENU CHECKBOX (hidden) -->
+<input type="checkbox" id="menuCheck" class="menu-check" />
+
+<!-- NAV -->
+<nav id="nav">
+  <a href="index.html" class="wordmark">EMBER</a>
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="explore.html" class="active">Explore</a>
+    <a href="restaurants.html">Restaurants</a>
+    <a href="offers.html">Offers</a>
+  </div>
+
+  <!-- Search input (pure HTML/CSS) -->
+  <div class="nav-search-box">
+    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+      <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+    </svg>
+    <input type="text" placeholder="Search biryani, pizza, burgers..." aria-label="Search dishes" />
+  </div>
+
+  <div class="nav-right">
+    <!-- Veg / Non-Veg Iconic Toggle (Symbols instead of text) -->
+    <label class="veg-toggle" title="Toggle Vegetarian / Non-Vegetarian" aria-label="Toggle Veg / Non-Veg">
+      <input type="checkbox" id="vegCheck" class="veg-check" />
+      <span class="veg-symbol veg-icon" title="Vegetarian">
+        <span class="symbol-box"><span class="symbol-circle"></span></span>
+      </span>
+      <div class="veg-toggle__track">
+        <div class="veg-toggle__thumb"></div>
+      </div>
+      <span class="veg-symbol nonveg-icon" title="Non-Vegetarian">
+        <span class="symbol-box"><span class="symbol-triangle"></span></span>
+      </span>
+    </label>
+
+    <!-- Theme Toggle (Light / Dark Mode) -->
+    <label for="themeCheck" class="theme-toggle" title="Toggle Light / Dark Mode" aria-label="Toggle Theme">
+      <span class="theme-icon-sun">☼</span>
+      <span class="theme-icon-moon">🌙</span>
+    </label>
+
+    <!-- Profile Icon on Right -->
+    <a href="profile.html" class="nav-profile-btn" title="My Profile" aria-label="Profile">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="10"></circle>
+        <circle cx="12" cy="10" r="3.2"></circle>
+        <path d="M6.2 18.8C7.5 16.5 9.6 15.2 12 15.2C14.4 15.2 16.5 16.5 17.8 18.8"></path>
+      </svg>
+    </a>
+
+    <a href="offers.html" class="btn btn-primary">Offers 40%</a>
+
+    <!-- Hamburger -->
+    <label for="menuCheck" class="hamburger" aria-label="Toggle menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+
+  </div>
+</nav>
+
+<!-- Mobile nav drawer -->
+<div class="mobile-nav" id="mobileNav">
+  <a href="index.html">Home</a>
+  <a href="explore.html" class="active">Explore</a>
+  <a href="restaurants.html">Restaurants</a>
+  <a href="offers.html">Offers</a>
+  <a href="profile.html">Profile</a>
+  <a href="login.html">Sign In</a>
+</div>
+
+<!-- FLOATING QUICK CART PILL -->
+<a href="offers.html" class="floating-cart" title="View Cart">
+  <div class="cart-left">
+    <span class="cart-icon">🛒</span>
+    <div class="cart-text">
+      <span class="cart-count">2 Items Added</span>
+      <span class="cart-price">₹669</span>
+    </div>
+  </div>
+  <span class="cart-cta">Checkout →</span>
+</a>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <p class="eyebrow">Full culinary catalog</p>
+  <h1>Explore Our Menu</h1>
+  <p class="hero-sub">From slow dum-cooked biryanis to wood-fired artisan sourdough pizzas — each recipe is cooked over live fire & glowing coal.</p>
+</section>
+
+<!-- FILTER PILLS -->
+<div class="filter-bar">
+  <a href="#biryani" class="filter-pill active">🍚 Biryani</a>
+  <a href="#pizza" class="filter-pill">🍕 Pizza & Pasta</a>
+  <a href="#burgers" class="filter-pill">🍔 Burgers</a>
+  <a href="#tandoor" class="filter-pill">🔥 Tandoor & Curries</a>
+  <a href="#desserts" class="filter-pill">🍰 Desserts</a>
+</div>
+
+<!-- SECTION 1: BIRYANI -->
+<section class="section" id="biryani">
+  <div class="section-head">
+    <h2 class="section-title">Dum Biryani & Rice</h2>
+    <span class="eyebrow">Slow cooked over coal</span>
+  </div>
+  <div class="dishes-grid">
+
+    <div class="dish-card featured nonveg-card">
+      <div class="img-box img-rel">
+        <img src="https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=700&q=85&auto=format&fit=crop" alt="Chicken Dum Biryani" loading="lazy" />
+        <span class="dish-tag">Chef's Signature</span>
+      </div>
+      <div class="dish-body">
+        <h3 class="dish-name"><span class="dish-dot nonveg"></span>Chicken Dum Biryani</h3>
+        <p class="dish-desc">Aged long-grain basmati layered with tender spiced chicken, saffron, fried onions, and whole spices in a sealed handi.</p>
+        <div class="meta-row">
+          <span class="price">₹349</span>
+          <span class="divider"></span>
+          <span class="rating">⭐ 4.9</span>
+          <span class="divider"></span>
+          <span class="orders">3,200+ orders</span>
+          <button class="add-btn">+</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="small-stack">
+      <div class="dish-card small nonveg-card">
+        <div class="img-box"><img src="https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?w=400&q=80&auto=format&fit=crop" alt="Mutton Galouti Biryani" loading="lazy" /></div>
+        <div class="dish-body">
+          <h3 class="dish-name"><span class="dish-dot nonveg"></span>Mutton Gosht Biryani</h3>
+          <p class="dish-desc">Melt-in-mouth succulent lamb chunks marinated overnight with Awadhi spices.</p>
+          <div class="meta-row"><span class="price">₹489</span><span class="divider"></span><span class="rating">⭐ 4.9</span><button class="add-btn">+</button></div>
+        </div>
+      </div>
+
+      <div class="dish-card small">
+        <div class="img-box"><img src="https://images.unsplash.com/photo-1633945274405-b6c8069047b0?w=400&q=80&auto=format&fit=crop" alt="Paneer Dum Biryani" loading="lazy" /></div>
+        <div class="dish-body">
+          <h3 class="dish-name"><span class="dish-dot veg"></span>Smoked Paneer Biryani</h3>
+          <p class="dish-desc">Clay oven charred cottage cheese cubes layered with aromatic saffron rice & mint.</p>
+          <div class="meta-row"><span class="price">₹319</span><span class="divider"></span><span class="rating">⭐ 4.8</span><button class="add-btn">+</button></div>
+        </div>
+      </div>
+
+      <div class="dish-card small">
+        <div class="img-box"><img src="https://images.unsplash.com/photo-1596797038530-2c107229654b?w=400&q=80&auto=format&fit=crop" alt="Subz Hyderabadi Biryani" loading="lazy" /></div>
+        <div class="dish-body">
+          <h3 class="dish-name"><span class="dish-dot veg"></span>Nawabi Subz Biryani</h3>
+          <p class="dish-desc">Farm fresh vegetables, dry fruits, and kewra essence dum-cooked to perfection.</p>
+          <div class="meta-row"><span class="price">₹289</span><span class="divider"></span><span class="rating">⭐ 4.7</span><button class="add-btn">+</button></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- SECTION 2: PIZZAS & PASTAS -->
+<section class="section" id="pizza">
+  <div class="section-head">
+    <h2 class="section-title">Wood-Fired Pizzas & Pastas</h2>
+    <span class="eyebrow">48-hour fermented dough</span>
+  </div>
+  <div class="menu-grid">
+
+    <div class="dish-card">
+      <div class="img-box"><img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?w=600&q=80&auto=format&fit=crop" alt="Margherita Pizza" loading="lazy" /></div>
+      <div class="dish-body">
+        <h3 class="dish-name"><span class="dish-dot veg"></span>Wood-fired Margherita</h3>
+        <p class="dish-desc">San Marzano tomatoes, fresh buffalo mozzarella, fresh basil, extra virgin olive oil.</p>
+        <div class="meta-row"><span class="price">₹399</span><span class="divider"></span><span class="rating">⭐ 4.8</span><button class="add-btn">+</button></div>
+      </div>
+    </div>
+
+    <div class="dish-card nonveg-card">
+      <div class="img-box"><img src="https://images.unsplash.com/photo-1628840042765-356cda07504e?w=600&q=80&auto=format&fit=crop" alt="Smoked Pepperoni" loading="lazy" /></div>
+      <div class="dish-body">
+        <h3 class="dish-name"><span class="dish-dot nonveg"></span>Charred Pepperoni</h3>
+        <p class="dish-desc">Artisan pepperoni slices, hot honey drizzle, charred crust with mozzarella blend.</p>
+        <div class="meta-row"><span class="price">₹499</span><span class="divider"></span><span class="rating">⭐ 4.9</span><button class="add-btn">+</button></div>
+      </div>
+    </div>
+
+    <div class="dish-card">
+      <div class="img-box"><img src="https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?w=600&q=80&auto=format&fit=crop" alt="Truffle Mushroom Pasta" loading="lazy" /></div>
+      <div class="dish-body">
+        <h3 class="dish-name"><span class="dish-dot veg"></span>Truffle Cream Fettuccine</h3>
+        <p class="dish-desc">Handmade pasta tossed in wild porcini mushroom truffle sauce with parmesan crisp.</p>
+        <div class="meta-row"><span class="price">₹429</span><span class="divider"></span><span class="rating">⭐ 4.9</span><button class="add-btn">+</button></div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- SECTION 3: BURGERS -->
+<section class="section" id="burgers">
+  <div class="section-head">
+    <h2 class="section-title">Flame-Seared Burgers</h2>
+    <span class="eyebrow">House ground patties</span>
+  </div>
+  <div class="menu-grid">
+
+    <div class="dish-card nonveg-card">
+      <div class="img-box"><img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=600&q=80&auto=format&fit=crop" alt="Double Smash Burger" loading="lazy" /></div>
+      <div class="dish-body">
+        <h3 class="dish-name"><span class="dish-dot nonveg"></span>Double Smash Burger</h3>
+        <p class="dish-desc">Double smashed crusty beef/lamb patty, American cheese, pickles & smokey secret sauce.</p>
+        <div class="meta-row"><span class="price">₹299</span><span class="divider"></span><span class="rating">⭐ 4.7</span><button class="add-btn">+</button></div>
+      </div>
+    </div>
+
+    <div class="dish-card nonveg-card">
+      <div class="img-box"><img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=600&q=80&auto=format&fit=crop" alt="Fiery Crisp Chicken" loading="lazy" /></div>
+      <div class="dish-body">
+        <h3 class="dish-name"><span class="dish-dot nonveg"></span>Fiery Buttermilk Chicken</h3>
+        <p class="dish-desc">24h marinated chicken thigh fried ultra-crisp, Nashville hot dip, tangy coleslaw.</p>
+        <div class="meta-row"><span class="price">₹319</span><span class="divider"></span><span class="rating">⭐ 4.9</span><button class="add-btn">+</button></div>
+      </div>
+    </div>
+
+    <div class="dish-card">
+      <div class="img-box"><img src="https://images.unsplash.com/photo-1550547660-d9450f859349?w=600&q=80&auto=format&fit=crop" alt="Smoked Truffle Veggie Burger" loading="lazy" /></div>
+      <div class="dish-body">
+        <h3 class="dish-name"><span class="dish-dot veg"></span>Smoked Portobello & Cheese</h3>
+        <p class="dish-desc">Grilled portobello cap, caramelised balsamic onions, aged cheddar & brioche bun.</p>
+        <div class="meta-row"><span class="price">₹279</span><span class="divider"></span><span class="rating">⭐ 4.6</span><button class="add-btn">+</button></div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- SECTION 4: TANDOOR & CURRIES -->
+<section class="section" id="tandoor">
+  <div class="section-head">
+    <h2 class="section-title">Tandoor & Curries</h2>
+    <span class="eyebrow">Clay oven specialities</span>
+  </div>
+  <div class="menu-grid">
+
+    <div class="dish-card nonveg-card">
+      <div class="img-box"><img src="https://images.unsplash.com/photo-1567188040759-fb8a883dc6d8?w=600&q=80&auto=format&fit=crop" alt="Butter Chicken" loading="lazy" /></div>
+      <div class="dish-body">
+        <h3 class="dish-name"><span class="dish-dot nonveg"></span>Old Delhi Butter Chicken</h3>
+        <p class="dish-desc">Tandoori chicken pulled and simmered in velvet makhani gravy with fenugreek & cream.</p>
+        <div class="meta-row"><span class="price">₹320</span><span class="divider"></span><span class="rating">⭐ 4.9</span><button class="add-btn">+</button></div>
+      </div>
+    </div>
+
+    <div class="dish-card">
+      <div class="img-box"><img src="https://images.unsplash.com/photo-1588166524941-3bf61a9c41db?w=600&q=80&auto=format&fit=crop" alt="Dal Makhani" loading="lazy" /></div>
+      <div class="dish-body">
+        <h3 class="dish-name"><span class="dish-dot veg"></span>Coal-Simmered Dal Makhani</h3>
+        <p class="dish-desc">Black lentils slow-cooked overnight over glowing wood embers with rich butter & cream.</p>
+        <div class="meta-row"><span class="price">₹260</span><span class="divider"></span><span class="rating">⭐ 4.9</span><button class="add-btn">+</button></div>
+      </div>
+    </div>
+
+    <div class="dish-card">
+      <div class="img-box"><img src="https://images.unsplash.com/photo-1599488615731-7e5c2823ff28?w=600&q=80&auto=format&fit=crop" alt="Paneer Tikka" loading="lazy" /></div>
+      <div class="dish-body">
+        <h3 class="dish-name"><span class="dish-dot veg"></span>Bhatinda Paneer Tikka</h3>
+        <p class="dish-desc">Mustard & hung curd marinated cottage cheese skewered with peppers and charred.</p>
+        <div class="meta-row"><span class="price">₹280</span><span class="divider"></span><span class="rating">⭐ 4.8</span><button class="add-btn">+</button></div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- SECTION 5: DESSERTS -->
+<section class="section" id="desserts">
+  <div class="section-head">
+    <h2 class="section-title">Desserts & Shakes</h2>
+    <span class="eyebrow">Sweet endings</span>
+  </div>
+  <div class="menu-grid">
+
+    <div class="dish-card">
+      <div class="img-box"><img src="https://images.unsplash.com/photo-1551024601-bec78aea704b?w=600&q=80&auto=format&fit=crop" alt="Cheesecake" loading="lazy" /></div>
+      <div class="dish-body">
+        <h3 class="dish-name"><span class="dish-dot veg"></span>Charred Basque Cheesecake</h3>
+        <p class="dish-desc">Caramelised burnt exterior with molten creamy center and wild berry compote.</p>
+        <div class="meta-row"><span class="price">₹249</span><span class="divider"></span><span class="rating">⭐ 4.9</span><button class="add-btn">+</button></div>
+      </div>
+    </div>
+
+    <div class="dish-card">
+      <div class="img-box"><img src="https://images.unsplash.com/photo-1572490122747-3968b75cc699?w=600&q=80&auto=format&fit=crop" alt="Chocolate Shake" loading="lazy" /></div>
+      <div class="dish-body">
+        <h3 class="dish-name"><span class="dish-dot veg"></span>Dark Ember Chocolate Shake</h3>
+        <p class="dish-desc">70% single origin cocoa blended with artisanal vanilla gelato and roasted hazelnut.</p>
+        <div class="meta-row"><span class="price">₹199</span><span class="divider"></span><span class="rating">⭐ 4.8</span><button class="add-btn">+</button></div>
+      </div>
+    </div>
+
+    <div class="dish-card">
+      <div class="img-box"><img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?w=600&q=80&auto=format&fit=crop" alt="Shahi Tukda" loading="lazy" /></div>
+      <div class="dish-body">
+        <h3 class="dish-name"><span class="dish-dot veg"></span>Smoked Shahi Tukda</h3>
+        <p class="dish-desc">Ghee-fried brioche soaked in saffron syrup, topped with rabri and silver leaf.</p>
+        <div class="meta-row"><span class="price">₹219</span><span class="divider"></span><span class="rating">⭐ 4.9</span><button class="add-btn">+</button></div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top">
+    <div>
+      <div class="footer-wordmark"><span class="ember-dot"></span> EMBER</div>
+      <p class="footer-tagline">Fire-crafted delivery, since 2023.</p>
+    </div>
+    <div class="footer-nav">
+      <div><p class="col-head">Discover</p><ul><li><a href="restaurants.html">Restaurants</a></li><li><a href="explore.html">Signature dishes</a></li><li><a href="offers.html">Offers & Deals</a></li><li><a href="explore.html">Gift cards</a></li></ul></div>
+      <div><p class="col-head">Company</p><ul><li><a href="home.html">About us</a></li><li><a href="#">Careers</a></li><li><a href="#">Press</a></li><li><a href="#">Blog</a></li></ul></div>
+      <div><p class="col-head">Support</p><ul><li><a href="#">Help centre</a></li><li><a href="#">Track order</a></li><li><a href="#">Accessibility</a></li><li><a href="#">Contact</a></li></ul></div>
+      <div><p class="col-head">Partners</p><ul><li><a href="#">List your restaurant</a></li><li><a href="#">Become a rider</a></li><li><a href="#">Corporate orders</a></li><li><a href="#">API</a></li></ul></div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 Ember Technologies Inc. All rights reserved.</p>
+    <div class="legal-links"><a href="#">Privacy</a><a href="#">Terms</a><a href="#">Cookies</a></div>
+  </div>
+</footer>
+
+</body>
+</html>

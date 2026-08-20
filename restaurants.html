@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Top Restaurants — EMBER</title>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700;9..144,900&family=Inter+Tight:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- THEME CHECKBOX (hidden) -->
+<input type="checkbox" id="themeCheck" class="theme-check" />
+
+<!-- MENU CHECKBOX (hidden) -->
+<input type="checkbox" id="menuCheck" class="menu-check" />
+
+<!-- NAV -->
+<nav id="nav">
+  <a href="index.html" class="wordmark">EMBER</a>
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="explore.html">Explore</a>
+    <a href="restaurants.html" class="active">Restaurants</a>
+    <a href="offers.html">Offers</a>
+  </div>
+
+  <!-- Search input (pure HTML/CSS) -->
+  <div class="nav-search-box">
+    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+      <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+    </svg>
+    <input type="text" placeholder="Search restaurants & kitchens..." aria-label="Search restaurants" />
+  </div>
+
+  <div class="nav-right">
+    <!-- Veg / Non-Veg Iconic Toggle (Symbols instead of text) -->
+    <label class="veg-toggle" title="Toggle Vegetarian / Non-Vegetarian" aria-label="Toggle Veg / Non-Veg">
+      <input type="checkbox" id="vegCheck" class="veg-check" />
+      <span class="veg-symbol veg-icon" title="Vegetarian">
+        <span class="symbol-box"><span class="symbol-circle"></span></span>
+      </span>
+      <div class="veg-toggle__track">
+        <div class="veg-toggle__thumb"></div>
+      </div>
+      <span class="veg-symbol nonveg-icon" title="Non-Vegetarian">
+        <span class="symbol-box"><span class="symbol-triangle"></span></span>
+      </span>
+    </label>
+
+    <!-- Theme Toggle (Light / Dark Mode) -->
+    <label for="themeCheck" class="theme-toggle" title="Toggle Light / Dark Mode" aria-label="Toggle Theme">
+      <span class="theme-icon-sun">☼</span>
+      <span class="theme-icon-moon">🌙</span>
+    </label>
+
+    <!-- Profile Icon on Right -->
+    <a href="profile.html" class="nav-profile-btn" title="My Profile" aria-label="Profile">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="10"></circle>
+        <circle cx="12" cy="10" r="3.2"></circle>
+        <path d="M6.2 18.8C7.5 16.5 9.6 15.2 12 15.2C14.4 15.2 16.5 16.5 17.8 18.8"></path>
+      </svg>
+    </a>
+
+    <a href="offers.html" class="btn btn-primary">Offers 40%</a>
+
+    <!-- Hamburger -->
+    <label for="menuCheck" class="hamburger" aria-label="Toggle menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+  </div>
+</nav>
+
+<!-- Mobile nav drawer -->
+<div class="mobile-nav" id="mobileNav">
+  <a href="index.html">Home</a>
+  <a href="explore.html">Explore</a>
+  <a href="restaurants.html" class="active">Restaurants</a>
+  <a href="offers.html">Offers</a>
+  <a href="profile.html">Profile</a>
+  <a href="login.html">Sign In</a>
+</div>
+
+<!-- FLOATING QUICK CART PILL -->
+<a href="offers.html" class="floating-cart" title="View Cart">
+  <div class="cart-left">
+    <span class="cart-icon">🛒</span>
+    <div class="cart-text">
+      <span class="cart-count">2 Items Added</span>
+      <span class="cart-price">₹669</span>
+    </div>
+  </div>
+  <span class="cart-cta">Checkout →</span>
+</a>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <p class="eyebrow">Handpicked partners</p>
+  <h1>Top Restaurants Near You</h1>
+  <p class="hero-sub">Every restaurant on Ember is vetted for live-flame mastery, transparent sourcing, and pristine packaging.</p>
+</section>
+
+<!-- RESTAURANT LISTINGS -->
+<section class="section">
+  <div class="restaurants-full-grid">
+
+    <!-- 1 -->
+    <div class="rest-card">
+      <div class="img-box">
+        <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=600&q=80&auto=format&fit=crop" alt="Dum Pukht" loading="lazy" />
+      </div>
+      <div class="rest-body">
+        <h3 class="rest-name">Dum Pukht Awadh</h3>
+        <p class="rest-cuisine">North Indian · Mughlai · Handi Biryani</p>
+        <div class="rest-info">
+          <span class="rating">★ 4.9</span> · <span>20–30 min</span> · <span style="color:#4caf50;">Free delivery</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2 -->
+    <div class="rest-card">
+      <div class="img-box">
+        <img src="https://images.unsplash.com/photo-1537047902294-62a40c20a6ae?w=600&q=80&auto=format&fit=crop" alt="The Burger Lab" loading="lazy" />
+      </div>
+      <div class="rest-body">
+        <h3 class="rest-name">The Burger Lab & Co.</h3>
+        <p class="rest-cuisine">Gourmet Burgers · Thick Shakes · Sides</p>
+        <div class="rest-info">
+          <span class="rating">★ 4.8</span> · <span>25–35 min</span> · <span>₹30 delivery</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3 -->
+    <div class="rest-card">
+      <div class="img-box">
+        <img src="https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?w=700&q=80&auto=format&fit=crop" alt="Wok & Roll" loading="lazy" />
+      </div>
+      <div class="rest-body">
+        <h3 class="rest-name">Wok & Roll Asian Smoke</h3>
+        <p class="rest-cuisine">Pan Asian · Dim Sums · Szechuan Grills</p>
+        <div class="rest-info">
+          <span class="rating">★ 4.7</span> · <span>30–40 min</span> · <span style="color:#4caf50;">Free delivery</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 4 -->
+    <div class="rest-card">
+      <div class="img-box">
+        <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=600&q=80&auto=format&fit=crop" alt="Pizza Republic" loading="lazy" />
+      </div>
+      <div class="rest-body">
+        <h3 class="rest-name">Pizza Republic Artisan</h3>
+        <p class="rest-cuisine">Wood-fired Neapolitan · Sourdough Pasta</p>
+        <div class="rest-info">
+          <span class="rating">★ 4.8</span> · <span>20–30 min</span> · <span>₹20 delivery</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 5 -->
+    <div class="rest-card">
+      <div class="img-box">
+        <img src="https://images.unsplash.com/photo-1544025162-d76694265947?w=600&q=80&auto=format&fit=crop" alt="Smoke & Hearth BBQ" loading="lazy" />
+      </div>
+      <div class="rest-body">
+        <h3 class="rest-name">Smoke & Hearth BBQ</h3>
+        <p class="rest-cuisine">Texas BBQ · Smoked Ribs & Platters</p>
+        <div class="rest-info">
+          <span class="rating">★ 4.9</span> · <span>35–45 min</span> · <span style="color:#4caf50;">Free delivery</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 6 -->
+    <div class="rest-card">
+      <div class="img-box">
+        <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=600&q=80&auto=format&fit=crop" alt="Dolce & Coal" loading="lazy" />
+      </div>
+      <div class="rest-body">
+        <h3 class="rest-name">Dolce & Coal Patisserie</h3>
+        <p class="rest-cuisine">Charred Cheesecakes · Gelatos · Coffee</p>
+        <div class="rest-info">
+          <span class="rating">★ 4.9</span> · <span>15–25 min</span> · <span>₹25 delivery</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- RESTAURANT PARTNER BANNER -->
+<section class="section" style="background-color: #14100E; border-top: 1px solid #2A241F; text-align: center;">
+  <div style="max-width: 600px; margin: 0 auto;">
+    <p class="eyebrow">Partner with us</p>
+    <h2 class="section-title" style="font-size: 28px; margin-bottom: 12px;">Run a kitchen with live fire?</h2>
+    <p style="color: #8C8175; font-size: 14px; margin-bottom: 24px;">Join over 500+ premium restaurants delivering to thousands of food enthusiasts daily.</p>
+    <a href="mailto:partner@emberfood.com" class="btn btn-ghost">Apply as a Partner</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top">
+    <div>
+      <div class="footer-wordmark"><span class="ember-dot"></span> EMBER</div>
+      <p class="footer-tagline">Fire-crafted delivery, since 2023.</p>
+    </div>
+    <div class="footer-nav">
+      <div><p class="col-head">Discover</p><ul><li><a href="restaurants.html">Restaurants</a></li><li><a href="explore.html">Signature dishes</a></li><li><a href="offers.html">Offers & Deals</a></li><li><a href="explore.html">Gift cards</a></li></ul></div>
+      <div><p class="col-head">Company</p><ul><li><a href="home.html">About us</a></li><li><a href="#">Careers</a></li><li><a href="#">Press</a></li><li><a href="#">Blog</a></li></ul></div>
+      <div><p class="col-head">Support</p><ul><li><a href="#">Help centre</a></li><li><a href="#">Track order</a></li><li><a href="#">Accessibility</a></li><li><a href="#">Contact</a></li></ul></div>
+      <div><p class="col-head">Partners</p><ul><li><a href="#">List your restaurant</a></li><li><a href="#">Become a rider</a></li><li><a href="#">Corporate orders</a></li><li><a href="#">API</a></li></ul></div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 Ember Technologies Inc. All rights reserved.</p>
+    <div class="legal-links"><a href="#">Privacy</a><a href="#">Terms</a><a href="#">Cookies</a></div>
+  </div>
+</footer>
+
+</body>
+</html>
