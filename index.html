@@ -4,124 +4,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- Pure HTML redirect — no JS needed. Waits 3s then opens home.html -->
   <meta http-equiv="refresh" content="3;url=home.html" />
 
   <title>EMBER — Loading</title>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700;9..144,900&family=Inter+Tight:wght@400;500;600&display=swap" rel="stylesheet" />
-
-  <style>
-
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-
-    body {
-      background-color: #0E0C0B;
-      color: #F4EDE4;
-      font-family: 'Inter Tight', sans-serif;
-      height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      overflow: hidden;
-    }
-
-    /* ── Centre card fades + slides up on load ── */
-    .loader-wrap {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 28px;
-      animation: fadeUp 0.7s ease both;
-    }
-
-    @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(18px); }
-      to   { opacity: 1; transform: translateY(0); }
-    }
-
-    /* ── EMBER wordmark ── */
-    .brand {
-      font-family: 'Fraunces', serif;
-      font-size: 48px;
-      font-weight: 900;
-      letter-spacing: -1.5px;
-      color: #F4EDE4;
-    }
-
-    /* ── Spinner ── */
-    .spinner-wrap {
-      position: relative;
-      width: 60px;
-      height: 60px;
-    }
-
-    /* Dim background ring */
-    .spinner-wrap::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      border-radius: 50%;
-      border: 2px solid rgba(244, 237, 228, 0.08);
-    }
-
-    /* Spinning arc */
-    .spinner {
-      position: absolute;
-      inset: 0;
-      border-radius: 50%;
-      border: 2px solid transparent;
-      border-top-color: #D9662C;
-      border-right-color: rgba(217,102,44,0.3);
-      animation: spin 0.9s linear infinite;
-    }
-
-    @keyframes spin {
-      to { transform: rotate(360deg); }
-    }
-
-    /* ── Tagline ── */
-    .tagline {
-      font-size: 11px;
-      font-weight: 600;
-      letter-spacing: 3px;
-      text-transform: uppercase;
-      color: #8C8175;
-      animation: fadeUp 0.7s 0.25s ease both;
-    }
-
-    /* ── Progress bar crawls across the bottom ── */
-    /* Duration matches the meta refresh (3s) */
-    .progress-bar {
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      height: 2px;
-      width: 0%;
-      background-color: #D9662C;
-      box-shadow: 0 0 8px rgba(217, 102, 44, 0.6);
-      animation: fillBar 3s ease-in-out forwards;
-    }
-
-    @keyframes fillBar {
-      to { width: 100%; }
-    }
-
-    /* ── Fallback link (shown after 3s if redirect fails) ── */
-    .fallback {
-      font-size: 12px;
-      color: #8C8175;
-      margin-top: 8px;
-      opacity: 0;
-      /* Fade in only after 3s — so it's invisible during normal load */
-      animation: fadeUp 0.5s 3.2s ease forwards;
-    }
-
-    .fallback a {
-      color: #D9662C;
-      text-decoration: underline;
-    }
-
-  </style>
+  <link rel="stylesheet" href="index.css" />
 </head>
 <body>
 
@@ -139,7 +26,6 @@
     </p>
   </div>
 
-  <!-- Orange progress bar at the bottom -->
   <div class="progress-bar"></div>
 
 </body>

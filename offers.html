@@ -6,16 +6,15 @@
   <title>Deals & Offers — EMBER</title>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700;9..144,900&family=Inter+Tight:wght@400;500;600&display=swap" rel="stylesheet" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="common.css" />
+  <link rel="stylesheet" href="offers.css" />
 </head>
 <body>
 
-<!-- THEME CHECKBOX (hidden) -->
-<input type="checkbox" id="themeCheck" class="theme-check" />
+<input type="checkbox" class="theme-check" />
 <input type="checkbox" id="menuCheck" class="menu-check" />
 <input type="checkbox" id="cartCheck" style="display:none;" />
 
-<!-- NAV -->
 <nav id="nav">
   <a href="home.html" class="wordmark">EMBER</a>
   <div class="nav-links">
@@ -25,7 +24,6 @@
     <a href="offers.html" class="active">Offers</a>
   </div>
 
-  <!-- Search input (pure HTML/CSS) -->
   <div class="nav-search-box">
     <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
       <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
@@ -60,9 +58,10 @@
       </svg>
     </a>
 
+    <a href="login.html" class="nav-auth-btn">Sign In</a>
+
     <a href="explore.html" class="btn btn-primary">Order now</a>
 
-    <!-- Hamburger -->
     <label for="menuCheck" class="hamburger" aria-label="Toggle menu">
       <span></span>
       <span></span>
@@ -72,7 +71,6 @@
   </div>
 </nav>
 
-<!-- Mobile nav drawer -->
 <div class="mobile-nav" id="mobileNav">
   <a href="home.html">Home</a>
   <a href="explore.html">Explore</a>
@@ -82,7 +80,6 @@
   <a href="login.html">Sign In</a>
 </div>
 
-<!-- FLOATING QUICK CART PILL (Triggers Cart Drawer) -->
 <label for="cartCheck" class="floating-cart" title="View Cart" style="cursor: pointer;">
   <div class="cart-left">
     <span class="cart-icon">🛒</span>
@@ -94,14 +91,12 @@
   <span class="cart-cta">Checkout →</span>
 </label>
 
-<!-- PAGE HERO -->
 <section class="page-hero">
   <p class="eyebrow">Deals & Coupons</p>
   <h1>Exclusive Offers & Promos</h1>
   <p class="hero-sub">Save big on your next feast with handpicked discount vouchers, weekend specials, and payment partner cashback.</p>
 </section>
 
-<!-- FEATURED BIG BANNER -->
 <section class="offer" style="margin: 0;">
   <div class="offer-bg">
     <img src="https://images.unsplash.com/photo-1544025162-d76694265947?w=1600&q=80&auto=format&fit=crop" alt="Offer background" loading="lazy" />
@@ -115,8 +110,7 @@
   </div>
 </section>
 
-<!-- Coupons -->
-<section class="section container">
+<section class="section">
   <div class="section-head">
     <h2 class="section-title">Available Coupons</h2>
     <span class="eyebrow">Apply at checkout</span>
@@ -124,7 +118,6 @@
 
   <div class="coupon-grid">
 
-    <!-- 1 -->
     <div class="coupon-card">
       <div class="coupon-top">
         <div>
@@ -143,7 +136,6 @@
       </div>
     </div>
 
-    <!-- 2 -->
     <div class="coupon-card">
       <div class="coupon-top">
         <div>
@@ -162,7 +154,6 @@
       </div>
     </div>
 
-    <!-- 3 -->
     <div class="coupon-card">
       <div class="coupon-top">
         <div>
@@ -181,7 +172,6 @@
       </div>
     </div>
 
-    <!-- 4 -->
     <div class="coupon-card">
       <div class="coupon-top">
         <div>
@@ -200,7 +190,6 @@
       </div>
     </div>
 
-    <!-- 5 -->
     <div class="coupon-card">
       <div class="coupon-top">
         <div>
@@ -219,7 +208,6 @@
       </div>
     </div>
 
-    <!-- 6 -->
     <div class="coupon-card">
       <div class="coupon-top">
         <div>
@@ -241,80 +229,105 @@
   </div>
 </section>
 
-<!-- BANK OFFERS & PAYMENT DEALS -->
-<section class="section" style="background-color: #14100E; border-top: 1px solid #2A241F;">
+<section class="section" style="background-color: var(--surface); border-top: 1px solid var(--border);">
   <div class="section-head">
     <h2 class="section-title">Bank & Wallet Offers</h2>
     <span class="eyebrow">Instant checkout discount</span>
   </div>
-  <div class="why-grid">
-    <div class="why-item">
-      <span class="why-num" style="font-size:32px;">💳</span>
-      <div>
-        <h3 class="why-title">HDFC Bank Credit Cards</h3>
-        <p class="why-body">Flat 15% instant discount up to ₹120 on all orders above ₹500 every Friday & Saturday.</p>
+  <div class="bank-grid">
+    <div class="bank-card">
+      <div class="bank-head">
+        <div class="bank-icon-box">💳</div>
+        <div>
+          <h3 class="bank-name">HDFC Bank</h3>
+          <span class="bank-disc-pill">Flat 15% OFF</span>
+        </div>
       </div>
+      <p class="bank-desc">Instant discount up to ₹120 on all credit cards on orders above ₹500 every Fri & Sat.</p>
     </div>
-    <div class="why-item">
-      <span class="why-num" style="font-size:32px;">🏦</span>
-      <div>
-        <h3 class="why-title">ICICI Bank NetBanking</h3>
-        <p class="why-body">Flat 10% instant discount up to ₹100 on orders above ₹400 every Sunday.</p>
+
+    <div class="bank-card">
+      <div class="bank-head">
+        <div class="bank-icon-box">🏦</div>
+        <div>
+          <h3 class="bank-name">ICICI Bank</h3>
+          <span class="bank-disc-pill">Flat 10% OFF</span>
+        </div>
       </div>
+      <p class="bank-desc">Instant discount up to ₹100 via NetBanking on orders above ₹400 every Sunday.</p>
     </div>
-    <div class="why-item">
-      <span class="why-num" style="font-size:32px;">📱</span>
-      <div>
-        <h3 class="why-title">CRED UPI / Pay</h3>
-        <p class="why-body">Assured cashback between ₹25 to ₹100 on transactions completed via CRED Pay.</p>
+
+    <div class="bank-card">
+      <div class="bank-head">
+        <div class="bank-icon-box">📱</div>
+        <div>
+          <h3 class="bank-name">CRED Pay</h3>
+          <span class="bank-disc-pill">₹100 Cashback</span>
+        </div>
       </div>
+      <p class="bank-desc">Assured cashback between ₹25 to ₹100 on transactions completed via CRED UPI.</p>
     </div>
-    <div class="why-item">
-      <span class="why-num" style="font-size:32px;">⚡</span>
-      <div>
-        <h3 class="why-title">Paytm & Google Pay</h3>
-        <p class="why-body">Earn scratch cards and reward vouchers up to ₹75 on UPI payments.</p>
+
+    <div class="bank-card">
+      <div class="bank-head">
+        <div class="bank-icon-box">⚡</div>
+        <div>
+          <h3 class="bank-name">UPI Offers</h3>
+          <span class="bank-disc-pill">₹75 Scratch Card</span>
+        </div>
       </div>
+      <p class="bank-desc">Earn scratch cards and reward vouchers up to ₹75 on Paytm & Google Pay payments.</p>
     </div>
   </div>
 </section>
 
-<!-- HOW TO REDEEM -->
-<section class="why">
-  <h2 class="section-title">How to Redeem</h2>
-  <div class="why-grid">
-    <div class="why-item">
-      <span class="why-num">01</span>
-      <div>
-        <h3 class="why-title">Choose your dishes</h3>
-        <p class="why-body">Browse through the explore catalog and add your favourite flame-crafted meals to your cart.</p>
-      </div>
+<section class="section redeem-section">
+  <div class="section-head">
+    <div>
+      <p class="eyebrow">Quick & Easy Guide</p>
+      <h2 class="section-title">How to Redeem Coupons</h2>
     </div>
-    <div class="why-item">
-      <span class="why-num">02</span>
-      <div>
-        <h3 class="why-title">Select or enter promo</h3>
-        <p class="why-body">Copy any coupon code above (e.g. <strong>EMBER40</strong>) and enter it in the coupon box.</p>
+  </div>
+
+  <div class="redeem-steps-grid">
+    <div class="redeem-card">
+      <div class="redeem-top">
+        <span class="redeem-badge">Step 01</span>
+        <div class="redeem-icon">🍽️</div>
       </div>
+      <h3 class="redeem-title">Choose your dishes</h3>
+      <p class="redeem-desc">Explore the catalog and add your favourite flame-crafted meals & combos to your cart.</p>
     </div>
-    <div class="why-item">
-      <span class="why-num">03</span>
-      <div>
-        <h3 class="why-title">Enjoy instant discount</h3>
-        <p class="why-body">The discount applies immediately to your order total before payment.</p>
+
+    <div class="redeem-card">
+      <div class="redeem-top">
+        <span class="redeem-badge">Step 02</span>
+        <div class="redeem-icon">🎟️</div>
       </div>
+      <h3 class="redeem-title">Apply promo code</h3>
+      <p class="redeem-desc">Copy any active coupon code above (like <strong>EMBER40</strong>) and paste it at checkout.</p>
     </div>
-    <div class="why-item">
-      <span class="why-num">04</span>
-      <div>
-        <h3 class="why-title">Fast, hot delivery</h3>
-        <p class="why-body">Sit back and relax while our heat-retaining packaging brings your meal hot & crisp in 20-35 mins.</p>
+
+    <div class="redeem-card">
+      <div class="redeem-top">
+        <span class="redeem-badge">Step 03</span>
+        <div class="redeem-icon">💰</div>
       </div>
+      <h3 class="redeem-title">Get instant savings</h3>
+      <p class="redeem-desc">Your order total updates automatically with the discount applied before payment.</p>
+    </div>
+
+    <div class="redeem-card">
+      <div class="redeem-top">
+        <span class="redeem-badge">Step 04</span>
+        <div class="redeem-icon">🛵</div>
+      </div>
+      <h3 class="redeem-title">Fast hot delivery</h3>
+      <p class="redeem-desc">Track your rider in real time and enjoy hot fire-grilled food at your doorstep in 25 mins.</p>
     </div>
   </div>
 </section>
 
-<!-- FOOTER -->
 <footer>
   <div class="footer-top">
     <div>
@@ -332,7 +345,7 @@
     <p>© 2026 Ember Technologies Inc. All rights reserved.</p>
     <div class="legal-links"><a href="#">Privacy</a><a href="#">Terms</a><a href="#">Cookies</a></div>
   </div>
-<!-- PURE HTML & INLINE CSS CART DRAWER LAYOUT -->
+
 <style>
   #cartCheck:checked ~ label.cart-backdrop-overlay { opacity: 1 !important; pointer-events: auto !important; }
   #cartCheck:checked ~ div.cart-drawer-box { right: 0 !important; }
@@ -342,7 +355,6 @@
 
 <div class="cart-drawer-box" style="position: fixed; top: 0; right: -450px; width: 100%; max-width: 420px; height: 100vh; background: var(--card, #1A1512); border-left: 1px solid var(--border, #2A241F); z-index: 9999; display: flex; flex-direction: column; justify-content: space-between; padding: 24px; transition: right 0.35s cubic-bezier(0.4, 0, 0.2, 1); box-shadow: -10px 0 35px rgba(0,0,0,0.6); color: var(--text, #F4EDE4);">
 
-  <!-- Drawer Top Bar -->
   <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border, #2A241F); padding-bottom: 16px;">
     <div style="display: flex; align-items: center; gap: 10px;">
       <span style="font-size: 22px;">🛒</span>
@@ -352,10 +364,8 @@
     <label for="cartCheck" style="font-size: 18px; cursor: pointer; color: var(--muted, #8C8175); width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; background: var(--input-bg, #0E0C0B); border: 1px solid var(--border, #2A241F);">✕</label>
   </div>
 
-  <!-- Cart Items Scroll Area -->
   <div style="flex: 1; overflow-y: auto; margin: 16px 0; padding-right: 4px;">
-    
-    <!-- Item 1 -->
+
     <div style="background: var(--surface, #14100E); border: 1px solid var(--border, #2A241F); border-radius: 8px; padding: 14px; display: flex; gap: 12px; align-items: center; margin-bottom: 12px;">
       <img src="https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=120&q=80&auto=format&fit=crop" style="width: 56px; height: 56px; border-radius: 6px; object-fit: cover;" alt="Biryani" />
       <div style="flex: 1;">
@@ -369,7 +379,6 @@
       </div>
     </div>
 
-    <!-- Item 2 -->
     <div style="background: var(--surface, #14100E); border: 1px solid var(--border, #2A241F); border-radius: 8px; padding: 14px; display: flex; gap: 12px; align-items: center; margin-bottom: 12px;">
       <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?w=120&q=80&auto=format&fit=crop" style="width: 56px; height: 56px; border-radius: 6px; object-fit: cover;" alt="Pizza" />
       <div style="flex: 1;">
@@ -383,7 +392,6 @@
       </div>
     </div>
 
-    <!-- Applied Promo Banner -->
     <div style="background: rgba(217, 102, 44, 0.08); border: 1px dashed #D9662C; border-radius: 8px; padding: 12px 14px; display: flex; justify-content: space-between; align-items: center;">
       <div>
         <span style="font-size: 10px; font-weight: 700; letter-spacing: 1px; color: #D9662C; text-transform: uppercase;">Applied Coupon</span>
@@ -394,7 +402,6 @@
 
   </div>
 
-  <!-- Bottom Price Summary & CTA -->
   <div style="border-top: 1px solid var(--border, #2A241F); padding-top: 16px;">
     <div style="display: flex; justify-content: space-between; font-size: 13px; color: var(--muted, #8C8175); margin-bottom: 6px;"><span>Item Subtotal</span><span>₹748</span></div>
     <div style="display: flex; justify-content: space-between; font-size: 13px; color: #4caf50; margin-bottom: 6px;"><span>Coupon Savings (EMBER40)</span><span>-₹200</span></div>
