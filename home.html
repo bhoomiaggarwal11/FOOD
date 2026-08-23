@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>EMBER — Crafted for your cravings</title>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700;9..144,900&family=Inter+Tight:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -14,6 +15,9 @@
 
 <!-- MENU CHECKBOX (hidden) -->
 <input type="checkbox" id="menuCheck" class="menu-check" />
+
+<!-- CART CHECKBOX (hidden) -->
+<input type="checkbox" id="cartCheck" style="display:none;" />
 
 <!-- NAV -->
 <nav id="nav">
@@ -84,6 +88,73 @@
   <a href="profile.html">Profile</a>
   <a href="login.html">Sign In</a>
   <a href="signup.html">Register</a>
+</div>
+
+<!-- LIVE ORDER DISPATCH & TRACKER BANNER (Pure HTML & Inline CSS) -->
+<div class="live-tracker-wrap" style="max-width: 1200px; margin: 80px auto -30px; padding: 0 20px; position: relative; z-index: 10;">
+  <div style="background: linear-gradient(135deg, rgba(217, 102, 44, 0.15) 0%, var(--card, #1A1512) 100%); border: 1px solid rgba(217, 102, 44, 0.4); border-radius: 12px; padding: 20px 24px; display: flex; flex-direction: column; gap: 16px; box-shadow: 0 10px 30px var(--shadow-color, rgba(0,0,0,0.4)); position: relative; overflow: hidden;">
+    
+    <!-- Top info row -->
+    <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px;">
+      <div style="display: flex; align-items: center; gap: 12px;">
+        <span style="font-size: 28px; animation: pulse 2s infinite ease-in-out;">🔥</span>
+        <div>
+          <div style="font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: #D9662C;">LIVE ORDER STATUS • #EMB-9842</div>
+          <h3 style="font-family: 'Fraunces', serif; font-size: 20px; font-weight: 700; color: var(--text, #F4EDE4); margin: 2px 0 0 0;">Cooking over live wood fire</h3>
+        </div>
+      </div>
+      <div style="display: flex; align-items: center; gap: 8px; background: rgba(76, 175, 80, 0.15); border: 1px solid rgba(76, 175, 80, 0.4); padding: 6px 14px; border-radius: 50px;">
+        <span style="width: 8px; height: 8px; border-radius: 50%; background: #4caf50; display: inline-block;"></span>
+        <span style="font-size: 13px; font-weight: 700; color: #4caf50;">ETA: 18 Mins</span>
+      </div>
+    </div>
+
+    <!-- 4-Step Progress Tracker Line -->
+    <div style="display: flex; justify-content: space-between; align-items: center; position: relative; margin: 12px 0 4px;">
+      <div style="position: absolute; top: 12px; left: 0; right: 0; height: 3px; background: var(--border, #2A241F); z-index: 1;"></div>
+      <div style="position: absolute; top: 12px; left: 0; width: 45%; height: 3px; background: #D9662C; z-index: 1;"></div>
+      
+      <!-- Step 1 -->
+      <div style="position: relative; z-index: 2; display: flex; flex-direction: column; align-items: center; gap: 6px;">
+        <div style="width: 26px; height: 26px; border-radius: 50%; background: #D9662C; color: #FFFFFF; font-size: 12px; font-weight: 700; display: flex; align-items: center; justify-content: center; box-shadow: 0 0 10px rgba(217, 102, 44, 0.6);">✓</div>
+        <span style="font-size: 11px; font-weight: 600; color: var(--text, #F4EDE4);">Order Placed</span>
+      </div>
+
+      <!-- Step 2 -->
+      <div style="position: relative; z-index: 2; display: flex; flex-direction: column; align-items: center; gap: 6px;">
+        <div style="width: 26px; height: 26px; border-radius: 50%; background: #D9662C; color: #FFFFFF; font-size: 12px; font-weight: 700; display: flex; align-items: center; justify-content: center; box-shadow: 0 0 14px rgba(217, 102, 44, 0.9);">🔥</div>
+        <span style="font-size: 11px; font-weight: 700; color: #D9662C;">Flame Cooking</span>
+      </div>
+
+      <!-- Step 3 -->
+      <div style="position: relative; z-index: 2; display: flex; flex-direction: column; align-items: center; gap: 6px;">
+        <div style="width: 26px; height: 26px; border-radius: 50%; background: var(--input-bg, #0E0C0B); border: 2px solid var(--border, #2A241F); color: var(--muted, #8C8175); font-size: 12px; font-weight: 700; display: flex; align-items: center; justify-content: center;">🛵</div>
+        <span style="font-size: 11px; font-weight: 500; color: var(--muted, #8C8175);">On the Way</span>
+      </div>
+
+      <!-- Step 4 -->
+      <div style="position: relative; z-index: 2; display: flex; flex-direction: column; align-items: center; gap: 6px;">
+        <div style="width: 26px; height: 26px; border-radius: 50%; background: var(--input-bg, #0E0C0B); border: 2px solid var(--border, #2A241F); color: var(--muted, #8C8175); font-size: 12px; font-weight: 700; display: flex; align-items: center; justify-content: center;">🏡</div>
+        <span style="font-size: 11px; font-weight: 500; color: var(--muted, #8C8175);">Delivered</span>
+      </div>
+    </div>
+
+    <!-- Rider info strip -->
+    <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--border, #2A241F); padding-top: 12px; flex-wrap: wrap; gap: 10px;">
+      <div style="display: flex; align-items: center; gap: 10px;">
+        <div style="width: 36px; height: 36px; border-radius: 50%; background: #D9662C; color: #0E0C0B; font-weight: 700; font-size: 13px; display: flex; align-items: center; justify-content: center;">RV</div>
+        <div>
+          <div style="font-size: 13px; font-weight: 600; color: var(--text, #F4EDE4);">Ramesh Verma <span style="font-size: 11px; color: #D9662C;">⭐ 4.9</span></div>
+          <div style="font-size: 11px; color: var(--muted, #8C8175);">Delivery Partner • Hero Splendor (DL 3S AB 4210)</div>
+        </div>
+      </div>
+      <div style="display: flex; gap: 8px;">
+        <a href="tel:+919876543210" style="font-size: 12px; font-weight: 600; color: var(--text, #F4EDE4); background: var(--input-bg, #0E0C0B); border: 1px solid var(--border, #2A241F); padding: 6px 14px; border-radius: 20px; text-decoration: none;">Call Partner 📞</a>
+        <a href="profile.html#orders" style="font-size: 12px; font-weight: 600; color: #0E0C0B; background: #D9662C; border: 1px solid #D9662C; padding: 6px 14px; border-radius: 20px; text-decoration: none;">Track Live 📍</a>
+      </div>
+    </div>
+
+  </div>
 </div>
 
 <!-- HERO -->
@@ -255,7 +326,7 @@
 </section>
 
 <!-- TESTIMONIALS / REVIEWS -->
-<section class="section" style="border-top: 1px solid #2A241F; background-color: #120F0D;">
+<section class="section section-dark">
   <div class="section-head">
     <h2 class="section-title">Loved by 50,000+ Foodies</h2>
     <span class="eyebrow">Real reviews</span>
@@ -298,7 +369,7 @@
 </section>
 
 <!-- FAQ SECTION (<details> / <summary>) -->
-<section class="section" id="faq" style="border-top: 1px solid #2A241F;">
+<section class="section" id="faq">
   <div class="section-head">
     <h2 class="section-title">Frequently Asked Questions</h2>
     <span class="eyebrow">Everything you need to know</span>
@@ -337,7 +408,7 @@
         <span class="faq-chevron">▾</span>
       </summary>
       <div class="faq-answer">
-        <p>Visit our <a href="offers.html" style="color:#D9662C; text-decoration:underline;">Offers page</a> to view all active promo codes. Simply enter the code during checkout to receive instant discounts up to 50%.</p>
+        <p>Visit our <a href="offers.html" class="text-accent">Offers page</a> to view all active promo codes. Simply enter the code during checkout to receive instant discounts up to 50%.</p>
       </div>
     </details>
   </div>
@@ -386,7 +457,90 @@
     <p>© 2026 Ember Technologies Inc. All rights reserved.</p>
     <div class="legal-links"><a href="#">Privacy</a><a href="#">Terms</a><a href="#">Cookies</a></div>
   </div>
-</footer>
+<!-- FLOATING QUICK CART PILL (Triggers Cart Drawer) -->
+<label for="cartCheck" class="floating-cart" title="View Cart" style="cursor: pointer;">
+  <div class="cart-left">
+    <span class="cart-icon">🛒</span>
+    <div class="cart-text">
+      <span class="cart-count">2 Items Added</span>
+      <span class="cart-price">₹548</span>
+    </div>
+  </div>
+  <span class="cart-cta">Checkout →</span>
+</label>
+
+<!-- PURE HTML & INLINE CSS CART DRAWER LAYOUT -->
+<style>
+  #cartCheck:checked ~ label.cart-backdrop-overlay { opacity: 1 !important; pointer-events: auto !important; }
+  #cartCheck:checked ~ div.cart-drawer-box { right: 0 !important; }
+</style>
+
+<label for="cartCheck" class="cart-backdrop-overlay" style="position: fixed; inset: 0; background: rgba(0, 0, 0, 0.6); backdrop-filter: blur(4px); z-index: 9998; opacity: 0; pointer-events: none; transition: opacity 0.3s ease;"></label>
+
+<div class="cart-drawer-box" style="position: fixed; top: 0; right: -450px; width: 100%; max-width: 420px; height: 100vh; background: var(--card, #1A1512); border-left: 1px solid var(--border, #2A241F); z-index: 9999; display: flex; flex-direction: column; justify-content: space-between; padding: 24px; transition: right 0.35s cubic-bezier(0.4, 0, 0.2, 1); box-shadow: -10px 0 35px rgba(0,0,0,0.6); color: var(--text, #F4EDE4);">
+
+  <!-- Drawer Top Bar -->
+  <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border, #2A241F); padding-bottom: 16px;">
+    <div style="display: flex; align-items: center; gap: 10px;">
+      <span style="font-size: 22px;">🛒</span>
+      <h3 style="font-family: 'Fraunces', serif; font-size: 20px; font-weight: 700; margin: 0; color: var(--text, #F4EDE4);">Your Ember Order</h3>
+      <span style="background: rgba(217, 102, 44, 0.15); border: 1px solid #D9662C; color: #D9662C; font-size: 11px; font-weight: 700; padding: 2px 8px; border-radius: 12px;">2 Items</span>
+    </div>
+    <label for="cartCheck" style="font-size: 18px; cursor: pointer; color: var(--muted, #8C8175); width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; background: var(--input-bg, #0E0C0B); border: 1px solid var(--border, #2A241F);">✕</label>
+  </div>
+
+  <!-- Cart Items Scroll Area -->
+  <div style="flex: 1; overflow-y: auto; margin: 16px 0; padding-right: 4px;">
+    
+    <!-- Item 1 -->
+    <div style="background: var(--surface, #14100E); border: 1px solid var(--border, #2A241F); border-radius: 8px; padding: 14px; display: flex; gap: 12px; align-items: center; margin-bottom: 12px;">
+      <img src="https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=120&q=80&auto=format&fit=crop" style="width: 56px; height: 56px; border-radius: 6px; object-fit: cover;" alt="Biryani" />
+      <div style="flex: 1;">
+        <h4 style="font-size: 14px; font-weight: 600; margin: 0 0 4px 0; color: var(--text, #F4EDE4);">Chicken Dum Biryani</h4>
+        <div style="font-size: 13px; font-weight: 700; color: #D9662C;">₹349</div>
+      </div>
+      <div style="display: flex; align-items: center; gap: 8px; background: var(--input-bg, #0E0C0B); border: 1px solid var(--border, #2A241F); padding: 4px 8px; border-radius: 20px;">
+        <button style="background: none; border: none; color: var(--text, #F4EDE4); font-size: 14px; cursor: pointer; padding: 0 4px;">-</button>
+        <span style="font-size: 13px; font-weight: 600; color: var(--text, #F4EDE4);">1</span>
+        <button style="background: none; border: none; color: var(--text, #F4EDE4); font-size: 14px; cursor: pointer; padding: 0 4px;">+</button>
+      </div>
+    </div>
+
+    <!-- Item 2 -->
+    <div style="background: var(--surface, #14100E); border: 1px solid var(--border, #2A241F); border-radius: 8px; padding: 14px; display: flex; gap: 12px; align-items: center; margin-bottom: 12px;">
+      <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?w=120&q=80&auto=format&fit=crop" style="width: 56px; height: 56px; border-radius: 6px; object-fit: cover;" alt="Pizza" />
+      <div style="flex: 1;">
+        <h4 style="font-size: 14px; font-weight: 600; margin: 0 0 4px 0; color: var(--text, #F4EDE4);">Wood-fired Margherita</h4>
+        <div style="font-size: 13px; font-weight: 700; color: #D9662C;">₹399</div>
+      </div>
+      <div style="display: flex; align-items: center; gap: 8px; background: var(--input-bg, #0E0C0B); border: 1px solid var(--border, #2A241F); padding: 4px 8px; border-radius: 20px;">
+        <button style="background: none; border: none; color: var(--text, #F4EDE4); font-size: 14px; cursor: pointer; padding: 0 4px;">-</button>
+        <span style="font-size: 13px; font-weight: 600; color: var(--text, #F4EDE4);">1</span>
+        <button style="background: none; border: none; color: var(--text, #F4EDE4); font-size: 14px; cursor: pointer; padding: 0 4px;">+</button>
+      </div>
+    </div>
+
+    <!-- Applied Promo Banner -->
+    <div style="background: rgba(217, 102, 44, 0.08); border: 1px dashed #D9662C; border-radius: 8px; padding: 12px 14px; display: flex; justify-content: space-between; align-items: center;">
+      <div>
+        <span style="font-size: 10px; font-weight: 700; letter-spacing: 1px; color: #D9662C; text-transform: uppercase;">Applied Coupon</span>
+        <div style="font-size: 13px; font-weight: 700; color: var(--text, #F4EDE4);">EMBER40 (40% OFF)</div>
+      </div>
+      <span style="font-size: 12px; font-weight: 700; color: #4caf50;">Saved ₹200</span>
+    </div>
+
+  </div>
+
+  <!-- Bottom Price Summary & CTA -->
+  <div style="border-top: 1px solid var(--border, #2A241F); padding-top: 16px;">
+    <div style="display: flex; justify-content: space-between; font-size: 13px; color: var(--muted, #8C8175); margin-bottom: 6px;"><span>Item Subtotal</span><span>₹748</span></div>
+    <div style="display: flex; justify-content: space-between; font-size: 13px; color: #4caf50; margin-bottom: 6px;"><span>Coupon Savings (EMBER40)</span><span>-₹200</span></div>
+    <div style="display: flex; justify-content: space-between; font-size: 13px; color: var(--muted, #8C8175); margin-bottom: 12px;"><span>Delivery Fee</span><span style="color: #4caf50; font-weight: 600;">FREE</span></div>
+    <div style="display: flex; justify-content: space-between; font-size: 18px; font-weight: 900; font-family: 'Fraunces', serif; color: var(--text, #F4EDE4); border-top: 1px solid var(--border, #2A241F); padding-top: 10px; margin-bottom: 16px;"><span>Final Amount</span><span>₹548</span></div>
+    <a href="profile.html#orders" style="display: block; text-align: center; background: #D9662C; color: #FFFFFF; font-weight: 700; padding: 14px; border-radius: 8px; text-decoration: none; font-size: 14px; box-shadow: 0 6px 20px rgba(217,102,44,0.4);">Proceed to Pay (₹548) →</a>
+  </div>
+
+</div>
 
 </body>
 </html>
