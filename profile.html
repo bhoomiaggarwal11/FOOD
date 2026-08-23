@@ -11,13 +11,19 @@
 </head>
 <body>
 
-<input type="checkbox" class="theme-check" />
 <input type="checkbox" id="menuCheck" class="menu-check" />
-<input type="checkbox" id="cartCheck" style="display:none;" />
+<input type="checkbox" id="themeCheck" class="theme-check" />
+<input type="checkbox" id="cartCheck" style="display: none;" />
 
-<nav id="nav">
-  <a href="home.html" class="wordmark">EMBER</a>
-  <div class="nav-links">
+<nav>
+  <div class="nav-left">
+    <a href="home.html" class="logo">
+      <span class="ember-dot"></span>
+      EMBER
+    </a>
+  </div>
+
+  <div class="nav-center">
     <a href="home.html">Home</a>
     <a href="explore.html">Explore</a>
     <a href="restaurants.html">Restaurants</a>
@@ -25,14 +31,14 @@
   </div>
 
   <div class="nav-search-box">
-    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
-      <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="11" cy="11" r="8"></circle>
+      <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
     </svg>
-    <input type="text" placeholder="Search orders & dishes..." aria-label="Search" />
+    <input type="text" placeholder="Search biryani, pizza, burgers..." />
   </div>
 
   <div class="nav-right">
-    
     <label class="veg-toggle" title="Toggle Vegetarian / Non-Vegetarian" aria-label="Toggle Veg / Non-Veg">
       <input type="checkbox" id="vegCheck" class="veg-check" />
       <span class="veg-symbol veg-icon" title="Vegetarian">
@@ -46,9 +52,9 @@
       </span>
     </label>
 
-    <label for="themeCheck" class="theme-toggle" title="Toggle Light / Dark Mode" aria-label="Toggle Theme">
-      <span class="theme-icon-sun">☼</span>
-      <span class="theme-icon-moon">🌙</span>
+    <label for="themeCheck" class="theme-toggle" title="Toggle Theme" aria-label="Toggle Theme">
+      <svg class="theme-icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+      <svg class="theme-icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
     </label>
 
     <a href="profile.html" class="nav-profile-btn active" title="My Profile" aria-label="Profile">
@@ -71,12 +77,13 @@
   </div>
 </nav>
 
-<div class="mobile-nav" id="mobileNav">
+<div class="mobile-nav">
   <a href="home.html">Home</a>
-  <a href="explore.html">Explore</a>
+  <a href="explore.html">Explore Menu</a>
   <a href="restaurants.html">Restaurants</a>
-  <a href="offers.html">Offers</a>
-  <a href="profile.html" class="active">Profile</a>
+  <a href="offers.html">Offers & Deals</a>
+  <a href="profile.html" class="active">My Account</a>
+  <a href="login.html">Sign In</a>
   <a href="logout.html" class="text-danger">Log Out</a>
 </div>
 
@@ -96,9 +103,9 @@
 
     <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px;">
       <div style="display: flex; align-items: center; gap: 12px;">
-        <span style="font-size: 28px; animation: pulse 2s infinite ease-in-out;">🔥</span>
+        <span style="font-size: 28px;">🔥</span>
         <div>
-          <div style="font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: #D9662C;">LIVE ORDER STATUS • #EMB-9842</div>
+          <div style="font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: #D9662C;">LIVE ORDER STATUS • #EMB-SAMPLE</div>
           <h3 style="font-family: 'Fraunces', serif; font-size: 20px; font-weight: 700; color: var(--text, #F4EDE4); margin: 2px 0 0 0;">Cooking over live wood fire</h3>
         </div>
       </div>
@@ -135,10 +142,10 @@
 
     <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--border, #2A241F); padding-top: 12px; flex-wrap: wrap; gap: 10px;">
       <div style="display: flex; align-items: center; gap: 10px;">
-        <div style="width: 36px; height: 36px; border-radius: 50%; background: #D9662C; color: #0E0C0B; font-weight: 700; font-size: 13px; display: flex; align-items: center; justify-content: center;">RV</div>
+        <div style="width: 36px; height: 36px; border-radius: 50%; background: #D9662C; color: #0E0C0B; font-weight: 700; font-size: 13px; display: flex; align-items: center; justify-content: center;">DP</div>
         <div>
-          <div style="font-size: 13px; font-weight: 600; color: var(--text, #F4EDE4);">Ramesh Verma <span style="font-size: 11px; color: #D9662C;">⭐ 4.9</span></div>
-          <div style="font-size: 11px; color: var(--muted, #8C8175);">Delivery Partner • Hero Splendor (DL 3S AB 4210)</div>
+          <div style="font-size: 13px; font-weight: 600; color: var(--text, #F4EDE4);">Delivery Partner <span style="font-size: 11px; color: #D9662C;">⭐ 4.9</span></div>
+          <div style="font-size: 11px; color: var(--muted, #8C8175);">Assigned Rider • Contact: +91 98765 XXXXX</div>
         </div>
       </div>
       <div style="display: flex; gap: 8px;">
@@ -154,31 +161,31 @@
 
   <section class="profile-hero-card">
     <div class="profile-user-info">
-      <div class="profile-avatar-large">AS</div>
+      <div class="profile-avatar-large">👤</div>
       <div class="profile-user-details">
         <h1>
-          Aarav Sharma
-          <span class="membership-badge">🔥 Flame Club VIP</span>
+          User Account
+          <span class="membership-badge">🔥 Member</span>
         </h1>
         <div class="profile-user-meta">
-          <span>📧 aarav.sharma@email.com</span>
+          <span>📧 user@example.com</span>
           <span>📱 +91 98765 43210</span>
-          <span>📍 South Delhi, India</span>
+          <span>📍 New Delhi, India</span>
         </div>
       </div>
     </div>
 
     <div class="profile-stats-row">
       <div class="p-stat-box">
-        <div class="p-stat-num">18</div>
+        <div class="p-stat-num">3</div>
         <div class="p-stat-label">Orders Placed</div>
       </div>
       <div class="p-stat-box">
-        <div class="p-stat-num">₹1,450</div>
+        <div class="p-stat-num">₹450</div>
         <div class="p-stat-label">Saved with Deals</div>
       </div>
       <div class="p-stat-box">
-        <div class="p-stat-num" style="color: #D9662C;">350</div>
+        <div class="p-stat-num" style="color: #D9662C;">150</div>
         <div class="p-stat-label">Ember Coins 🔥</div>
       </div>
       <div class="p-stat-box">
@@ -220,11 +227,11 @@
 
       <div class="profile-wallet-box" id="wallet">
         <h4>Ember Coins Wallet</h4>
-        <div class="wallet-balance">350 <span style="font-size:16px; color:#8C8175;">Coins (₹350)</span></div>
+        <div class="wallet-balance">150 <span style="font-size:16px; color:#8C8175;">Coins (₹150)</span></div>
         <p style="font-size:12px; color:#C5B9AE; margin-bottom: 12px; line-height: 1.4;">Use your coins at checkout for flat instant discounts on any order.</p>
         <div class="refer-code-pill">
           <span>Your Referral Code:</span>
-          <strong>AARAV100</strong>
+          <strong>EMBER100</strong>
         </div>
       </div>
     </aside>
@@ -243,7 +250,7 @@
             <div class="order-card-top">
               <div>
                 <h3 class="order-rest-name">Dum Pukht Awadh</h3>
-                <div class="order-id-date">Order #EMB-8921 • Delivered Today, 8:15 PM</div>
+                <div class="order-id-date">Order #EMB-8921 • Delivered Today</div>
               </div>
               <span class="order-status-badge">✔ Delivered</span>
             </div>
@@ -252,7 +259,7 @@
               • 1x Velvet Butter Chicken & 2x Butter Garlic Naan
             </div>
             <div class="order-card-bottom">
-              <div class="order-total-price">₹789 <span style="font-size:12px; color:#8C8175; font-family:'Inter Tight';">via Google Pay</span></div>
+              <div class="order-total-price">₹789 <span style="font-size:12px; color:#8C8175; font-family:'Inter Tight';">via UPI</span></div>
               <div class="order-actions">
                 <a href="explore.html" class="btn btn-primary btn-sm">Reorder 🔄</a>
                 <a href="#" class="btn btn-ghost btn-sm">Invoice 📄</a>
@@ -264,7 +271,7 @@
             <div class="order-card-top">
               <div>
                 <h3 class="order-rest-name">Pizza Republic Artisan</h3>
-                <div class="order-id-date">Order #EMB-8410 • Delivered 15 Aug, 1:40 PM</div>
+                <div class="order-id-date">Order #EMB-8410 • Delivered Recently</div>
               </div>
               <span class="order-status-badge">✔ Delivered</span>
             </div>
@@ -281,27 +288,6 @@
             </div>
           </div>
 
-          <div class="order-history-card">
-            <div class="order-card-top">
-              <div>
-                <h3 class="order-rest-name">The Burger Lab & Co.</h3>
-                <div class="order-id-date">Order #EMB-7952 • Delivered 10 Aug, 9:20 PM</div>
-              </div>
-              <span class="order-status-badge">✔ Delivered</span>
-            </div>
-            <div class="order-items-summary">
-              • 2x Double Smash Burgers (Pickles & Secret Sauce) <br />
-              • 1x Dark Ember Chocolate Shake
-            </div>
-            <div class="order-card-bottom">
-              <div class="order-total-price">₹797 <span style="font-size:12px; color:#8C8175; font-family:'Inter Tight';">via Credit Card</span></div>
-              <div class="order-actions">
-                <a href="explore.html" class="btn btn-primary btn-sm">Reorder 🔄</a>
-                <a href="#" class="btn btn-ghost btn-sm">Invoice 📄</a>
-              </div>
-            </div>
-          </div>
-
         </div>
       </section>
 
@@ -314,27 +300,27 @@
         <form class="profile-form-grid" action="#" onsubmit="return false;">
           <div class="p-input-group">
             <label>Full Name</label>
-            <input type="text" class="p-input" value="Aarav Sharma" />
+            <input type="text" class="p-input" placeholder="e.g. Rahul Sharma" />
           </div>
           <div class="p-input-group">
             <label>Email Address</label>
-            <input type="email" class="p-input" value="aarav.sharma@email.com" />
+            <input type="email" class="p-input" placeholder="e.g. user@example.com" />
           </div>
           <div class="p-input-group">
             <label>Phone Number</label>
-            <input type="tel" class="p-input" value="+91 98765 43210" />
+            <input type="tel" class="p-input" placeholder="e.g. +91 98765 43210" />
           </div>
           <div class="p-input-group">
             <label>Dietary Preference</label>
-            <input type="text" class="p-input" value="Non-Vegetarian (Loves Biryani & Steaks)" />
+            <input type="text" class="p-input" placeholder="e.g. Non-Vegetarian / Vegetarian" />
           </div>
           <div class="p-input-group">
             <label>Date of Birth</label>
-            <input type="text" class="p-input" value="14 October 1998" />
+            <input type="text" class="p-input" placeholder="e.g. DD / MM / YYYY" />
           </div>
           <div class="p-input-group">
             <label>City / Location</label>
-            <input type="text" class="p-input" value="South Delhi, NCR" />
+            <input type="text" class="p-input" placeholder="e.g. New Delhi, India" />
           </div>
           <div style="grid-column: 1 / -1; margin-top: 6px;">
             <button type="submit" class="btn btn-primary">Save Changes</button>
@@ -357,7 +343,7 @@
                 <span class="default-pill">DEFAULT</span>
               </div>
               <p class="address-text" style="margin-top: 8px;">
-                Flat B-402, Royal Palms Apartments, Green Park Main, South Delhi - 110016
+                Flat No. / House No., Street, Area, City - Pincode
               </p>
             </div>
             <div class="address-actions">
@@ -372,7 +358,7 @@
                 <span class="address-type-title">🏢 Work / Office</span>
               </div>
               <p class="address-text" style="margin-top: 8px;">
-                Tower 5, 8th Floor, DLF Cyber City, Phase 2, Gurugram, Haryana - 122002
+                Building / Office Name, Sector / Area, City - Pincode
               </p>
             </div>
             <div class="address-actions">
@@ -458,53 +444,47 @@
     <label for="cartCheck" style="font-size: 18px; cursor: pointer; color: var(--muted, #8C8175); width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; background: var(--input-bg, #0E0C0B); border: 1px solid var(--border, #2A241F);">✕</label>
   </div>
 
-  <div style="flex: 1; overflow-y: auto; margin: 16px 0; padding-right: 4px;">
-
-    <div style="background: var(--surface, #14100E); border: 1px solid var(--border, #2A241F); border-radius: 8px; padding: 14px; display: flex; gap: 12px; align-items: center; margin-bottom: 12px;">
-      <img src="https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=120&q=80&auto=format&fit=crop" style="width: 56px; height: 56px; border-radius: 6px; object-fit: cover;" alt="Biryani" />
-      <div style="flex: 1;">
-        <h4 style="font-size: 14px; font-weight: 600; margin: 0 0 4px 0; color: var(--text, #F4EDE4);">Chicken Dum Biryani</h4>
-        <div style="font-size: 13px; font-weight: 700; color: #D9662C;">₹349</div>
-      </div>
-      <div style="display: flex; align-items: center; gap: 8px; background: var(--input-bg, #0E0C0B); border: 1px solid var(--border, #2A241F); padding: 4px 8px; border-radius: 20px;">
-        <button style="background: none; border: none; color: var(--text, #F4EDE4); font-size: 14px; cursor: pointer; padding: 0 4px;">-</button>
-        <span style="font-size: 13px; font-weight: 600; color: var(--text, #F4EDE4);">1</span>
-        <button style="background: none; border: none; color: var(--text, #F4EDE4); font-size: 14px; cursor: pointer; padding: 0 4px;">+</button>
-      </div>
-    </div>
-
-    <div style="background: var(--surface, #14100E); border: 1px solid var(--border, #2A241F); border-radius: 8px; padding: 14px; display: flex; gap: 12px; align-items: center; margin-bottom: 12px;">
-      <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?w=120&q=80&auto=format&fit=crop" style="width: 56px; height: 56px; border-radius: 6px; object-fit: cover;" alt="Pizza" />
-      <div style="flex: 1;">
-        <h4 style="font-size: 14px; font-weight: 600; margin: 0 0 4px 0; color: var(--text, #F4EDE4);">Wood-fired Margherita</h4>
-        <div style="font-size: 13px; font-weight: 700; color: #D9662C;">₹399</div>
-      </div>
-      <div style="display: flex; align-items: center; gap: 8px; background: var(--input-bg, #0E0C0B); border: 1px solid var(--border, #2A241F); padding: 4px 8px; border-radius: 20px;">
-        <button style="background: none; border: none; color: var(--text, #F4EDE4); font-size: 14px; cursor: pointer; padding: 0 4px;">-</button>
-        <span style="font-size: 13px; font-weight: 600; color: var(--text, #F4EDE4);">1</span>
-        <button style="background: none; border: none; color: var(--text, #F4EDE4); font-size: 14px; cursor: pointer; padding: 0 4px;">+</button>
-      </div>
-    </div>
-
-    <div style="background: rgba(217, 102, 44, 0.08); border: 1px dashed #D9662C; border-radius: 8px; padding: 12px 14px; display: flex; justify-content: space-between; align-items: center;">
+  <div style="display: flex; flex-direction: column; gap: 14px; overflow-y: auto; padding: 16px 0; flex: 1;">
+    <div style="display: flex; justify-content: space-between; align-items: center; background: var(--surface, #14100E); border: 1px solid var(--border, #2A241F); border-radius: 8px; padding: 12px 14px;">
       <div>
-        <span style="font-size: 10px; font-weight: 700; letter-spacing: 1px; color: #D9662C; text-transform: uppercase;">Applied Coupon</span>
-        <div style="font-size: 13px; font-weight: 700; color: var(--text, #F4EDE4);">EMBER40 (40% OFF)</div>
+        <h4 style="font-size: 14px; font-weight: 600; margin: 0; color: var(--text, #F4EDE4);"><span class="dish-dot nonveg" style="display: inline-block; width: 8px; height: 8px; background: #e74c3c; border-radius: 2px; margin-right: 6px;"></span>Chicken Dum Biryani</h4>
+        <span style="font-size: 12px; color: var(--muted, #8C8175);">₹349 × 1</span>
       </div>
-      <span style="font-size: 12px; font-weight: 700; color: #4caf50;">Saved ₹200</span>
+      <span style="font-weight: 700; color: var(--text, #F4EDE4);">₹349</span>
     </div>
 
+    <div style="display: flex; justify-content: space-between; align-items: center; background: var(--surface, #14100E); border: 1px solid var(--border, #2A241F); border-radius: 8px; padding: 12px 14px;">
+      <div>
+        <h4 style="font-size: 14px; font-weight: 600; margin: 0; color: var(--text, #F4EDE4);"><span class="dish-dot veg" style="display: inline-block; width: 8px; height: 8px; background: #4caf50; border-radius: 2px; margin-right: 6px;"></span>Dark Ember Shake</h4>
+        <span style="font-size: 12px; color: var(--muted, #8C8175);">₹199 × 1</span>
+      </div>
+      <span style="font-weight: 700; color: var(--text, #F4EDE4);">₹199</span>
+    </div>
   </div>
 
-  <div style="border-top: 1px solid var(--border, #2A241F); padding-top: 16px;">
-    <div style="display: flex; justify-content: space-between; font-size: 13px; color: var(--muted, #8C8175); margin-bottom: 6px;"><span>Item Subtotal</span><span>₹748</span></div>
-    <div style="display: flex; justify-content: space-between; font-size: 13px; color: #4caf50; margin-bottom: 6px;"><span>Coupon Savings (EMBER40)</span><span>-₹200</span></div>
-    <div style="display: flex; justify-content: space-between; font-size: 13px; color: var(--muted, #8C8175); margin-bottom: 12px;"><span>Delivery Fee</span><span style="color: #4caf50; font-weight: 600;">FREE</span></div>
-    <div style="display: flex; justify-content: space-between; font-size: 18px; font-weight: 900; font-family: 'Fraunces', serif; color: var(--text, #F4EDE4); border-top: 1px solid var(--border, #2A241F); padding-top: 10px; margin-bottom: 16px;"><span>Final Amount</span><span>₹548</span></div>
-    <a href="profile.html#orders" style="display: block; text-align: center; background: #D9662C; color: #FFFFFF; font-weight: 700; padding: 14px; border-radius: 8px; text-decoration: none; font-size: 14px; box-shadow: 0 6px 20px rgba(217,102,44,0.4);">Proceed to Pay (₹548) →</a>
+  <div style="border-top: 1px solid var(--border, #2A241F); padding-top: 16px; display: flex; flex-direction: column; gap: 12px;">
+    <div style="display: flex; justify-content: space-between; font-size: 13px; color: var(--muted, #8C8175);">
+      <span>Item Total</span>
+      <span>₹548</span>
+    </div>
+    <div style="display: flex; justify-content: space-between; font-size: 13px; color: var(--muted, #8C8175);">
+      <span>Delivery Fee</span>
+      <span style="color: #4caf50; font-weight: 600;">FREE</span>
+    </div>
+    <div style="display: flex; justify-content: space-between; font-size: 13px; color: var(--muted, #8C8175);">
+      <span>Taxes & Charges</span>
+      <span>₹35</span>
+    </div>
+    <div style="display: flex; justify-content: space-between; font-size: 16px; font-weight: 700; color: var(--text, #F4EDE4); border-top: 1px dashed var(--border, #2A241F); padding-top: 10px;">
+      <span>To Pay</span>
+      <span style="color: #D9662C;">₹583</span>
+    </div>
+    <a href="profile.html#orders" class="btn btn-primary" style="width: 100%; justify-content: center; min-height: 46px; text-decoration: none;">Proceed to Pay (₹583) →</a>
   </div>
 
 </div>
+</footer>
 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
