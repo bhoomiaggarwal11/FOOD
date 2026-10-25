@@ -83,7 +83,7 @@
   font-weight: 900;
   line-height: 0.85;
   letter-spacing: -3px;
-  color: var(--banner-text);
+  color: #F4EDE4 !important;
   margin-bottom: 10px;
 }
 
@@ -91,18 +91,18 @@
   font-family: 'Fraunces', serif;
   font-size: 28px;
   font-weight: 700;
-  color: var(--banner-text);
+  color: #F4EDE4 !important;
   margin-bottom: 12px;
 }
 
 .offer-sub {
   font-size: 14px;
-  color: var(--banner-muted);
+  color: #C5B9AE !important;
   margin-bottom: 24px;
   line-height: 1.6;
 }
 
-.offer-sub strong { color: var(--banner-text); }
+.offer-sub strong { color: #F4EDE4 !important; }
 
 .section {
   padding: 44px 16px;
@@ -378,8 +378,22 @@
   .coupon-grid { grid-template-columns: repeat(2, 1fr); gap: 24px; }
   .redeem-steps-grid { grid-template-columns: repeat(2, 1fr); gap: 20px; }
   .bank-grid { grid-template-columns: repeat(2, 1fr); gap: 20px; }
-  .offer-num   { font-size: 130px; letter-spacing: -4px; }
-  .offer-title { font-size: 34px; }
+  .offer-num {
+  font-family: 'Fraunces', serif;
+  font-size: 90px;
+  font-weight: 900;
+  line-height: 0.85;
+  letter-spacing: -3px;
+  color: #F4EDE4 !important;
+  margin-bottom: 10px;
+}
+  .offer-title {
+  font-family: 'Fraunces', serif;
+  font-size: 28px;
+  font-weight: 700;
+  color: #F4EDE4 !important;
+  margin-bottom: 12px;
+}
 }
 
 @media (min-width: 992px) {
@@ -389,8 +403,22 @@
   .coupon-grid { grid-template-columns: repeat(3, 1fr); gap: 28px; }
   .redeem-steps-grid { grid-template-columns: repeat(4, 1fr); gap: 24px; }
   .bank-grid { grid-template-columns: repeat(4, 1fr); gap: 24px; }
-  .offer-num     { font-size: 170px; letter-spacing: -5px; }
-  .offer-title   { font-size: 40px; }
+  .offer-num {
+  font-family: 'Fraunces', serif;
+  font-size: 90px;
+  font-weight: 900;
+  line-height: 0.85;
+  letter-spacing: -3px;
+  color: #F4EDE4 !important;
+  margin-bottom: 10px;
+}
+  .offer-title {
+  font-family: 'Fraunces', serif;
+  font-size: 28px;
+  font-weight: 700;
+  color: #F4EDE4 !important;
+  margin-bottom: 12px;
+}
   .offer-content { padding: 60px 48px; }
 }
 
@@ -399,5 +427,13 @@
   .section { padding: 80px 60px; }
   .coupon-grid { grid-template-columns: repeat(3, 1fr); gap: 32px; }
   .redeem-steps-grid { grid-template-columns: repeat(4, 1fr); gap: 28px; }
-  .offer-num { font-size: 200px; letter-spacing: -6px; }
+  .offer-num {
+  font-family: 'Fraunces', serif;
+  font-size: 90px;
+  font-weight: 900;
+  line-height: 0.85;
+  letter-spacing: -3px;
+  color: #F4EDE4 !important;
+  margin-bottom: 10px;
+}
 }

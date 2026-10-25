@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -13,8 +13,6 @@
 
 <input type="checkbox" id="menuCheck" class="menu-check" />
 <input type="checkbox" id="themeCheck" class="theme-check" />
-<input type="checkbox" id="cartCheck" style="display: none;" />
-
 <nav>
   <div class="nav-left">
     <a href="home.html" class="logo">
@@ -40,7 +38,7 @@
 
   <div class="nav-right">
     <label class="veg-toggle" title="Toggle Vegetarian / Non-Vegetarian" aria-label="Toggle Veg / Non-Veg">
-      <input type="checkbox" id="vegCheck" class="veg-check" />
+      <input type="checkbox" id="vegCheck" class="veg-check" checked />
       <span class="veg-symbol veg-icon" title="Vegetarian">
         <span class="symbol-box"><span class="symbol-circle"></span></span>
       </span>
@@ -87,7 +85,7 @@
   <a href="logout.html" class="text-danger">Log Out</a>
 </div>
 
-<label for="cartCheck" class="floating-cart" title="View Cart" style="cursor: pointer;">
+<div class="floating-cart" title="View Cart">
   <div class="cart-left">
     <span class="cart-icon">🛒</span>
     <div class="cart-text">
@@ -96,7 +94,7 @@
     </div>
   </div>
   <span class="cart-cta">Checkout →</span>
-</label>
+</div>
 
 <div class="live-tracker-wrap" style="max-width: 1200px; margin: 80px auto 10px; padding: 0 20px; position: relative; z-index: 10;">
   <div style="background: linear-gradient(135deg, rgba(217, 102, 44, 0.15) 0%, var(--card, #1A1512) 100%); border: 1px solid rgba(217, 102, 44, 0.4); border-radius: 12px; padding: 20px 24px; display: flex; flex-direction: column; gap: 16px; box-shadow: 0 10px 30px var(--shadow-color, rgba(0,0,0,0.4)); position: relative; overflow: hidden;">
@@ -130,7 +128,7 @@
       </div>
 
       <div style="position: relative; z-index: 2; display: flex; flex-direction: column; align-items: center; gap: 6px;">
-        <div style="width: 26px; height: 26px; border-radius: 50%; background: var(--input-bg, #0E0C0B); border: 2px solid var(--border, #2A241F); color: var(--muted, #8C8175); font-size: 12px; font-weight: 700; display: flex; align-items: center; justify-content: center;">🛵</div>
+        <div style="width: 26px; height: 26px; border-radius: 50%; background: var(--input-bg, #0E0C0B); border: 2px solid var(--border, #2A241F); color: var(--muted, #8C8175); font-size: 12px; font-weight: 700; display: flex; align-items: center; justify-content: center;"><span style="display:inline-block;transform:scaleX(-1);">🛵</span></div>
         <span style="font-size: 11px; font-weight: 500; color: var(--muted, #8C8175);">On the Way</span>
       </div>
 
@@ -426,65 +424,7 @@
     <div class="legal-links"><a href="#">Privacy</a><a href="#">Terms</a><a href="#">Cookies</a></div>
   </div>
 
-<style>
-  #cartCheck:checked ~ label.cart-backdrop-overlay { opacity: 1 !important; pointer-events: auto !important; }
-  #cartCheck:checked ~ div.cart-drawer-box { right: 0 !important; }
-</style>
-
-<label for="cartCheck" class="cart-backdrop-overlay" style="position: fixed; inset: 0; background: rgba(0, 0, 0, 0.6); backdrop-filter: blur(4px); z-index: 9998; opacity: 0; pointer-events: none; transition: opacity 0.3s ease;"></label>
-
-<div class="cart-drawer-box" style="position: fixed; top: 0; right: -450px; width: 100%; max-width: 420px; height: 100vh; background: var(--card, #1A1512); border-left: 1px solid var(--border, #2A241F); z-index: 9999; display: flex; flex-direction: column; justify-content: space-between; padding: 24px; transition: right 0.35s cubic-bezier(0.4, 0, 0.2, 1); box-shadow: -10px 0 35px rgba(0,0,0,0.6); color: var(--text, #F4EDE4);">
-
-  <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border, #2A241F); padding-bottom: 16px;">
-    <div style="display: flex; align-items: center; gap: 10px;">
-      <span style="font-size: 22px;">🛒</span>
-      <h3 style="font-family: 'Fraunces', serif; font-size: 20px; font-weight: 700; margin: 0; color: var(--text, #F4EDE4);">Your Ember Order</h3>
-      <span style="background: rgba(217, 102, 44, 0.15); border: 1px solid #D9662C; color: #D9662C; font-size: 11px; font-weight: 700; padding: 2px 8px; border-radius: 12px;">2 Items</span>
-    </div>
-    <label for="cartCheck" style="font-size: 18px; cursor: pointer; color: var(--muted, #8C8175); width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; background: var(--input-bg, #0E0C0B); border: 1px solid var(--border, #2A241F);">✕</label>
-  </div>
-
-  <div style="display: flex; flex-direction: column; gap: 14px; overflow-y: auto; padding: 16px 0; flex: 1;">
-    <div style="display: flex; justify-content: space-between; align-items: center; background: var(--surface, #14100E); border: 1px solid var(--border, #2A241F); border-radius: 8px; padding: 12px 14px;">
-      <div>
-        <h4 style="font-size: 14px; font-weight: 600; margin: 0; color: var(--text, #F4EDE4);"><span class="dish-dot nonveg" style="display: inline-block; width: 8px; height: 8px; background: #e74c3c; border-radius: 2px; margin-right: 6px;"></span>Chicken Dum Biryani</h4>
-        <span style="font-size: 12px; color: var(--muted, #8C8175);">₹349 × 1</span>
-      </div>
-      <span style="font-weight: 700; color: var(--text, #F4EDE4);">₹349</span>
-    </div>
-
-    <div style="display: flex; justify-content: space-between; align-items: center; background: var(--surface, #14100E); border: 1px solid var(--border, #2A241F); border-radius: 8px; padding: 12px 14px;">
-      <div>
-        <h4 style="font-size: 14px; font-weight: 600; margin: 0; color: var(--text, #F4EDE4);"><span class="dish-dot veg" style="display: inline-block; width: 8px; height: 8px; background: #4caf50; border-radius: 2px; margin-right: 6px;"></span>Dark Ember Shake</h4>
-        <span style="font-size: 12px; color: var(--muted, #8C8175);">₹199 × 1</span>
-      </div>
-      <span style="font-weight: 700; color: var(--text, #F4EDE4);">₹199</span>
-    </div>
-  </div>
-
-  <div style="border-top: 1px solid var(--border, #2A241F); padding-top: 16px; display: flex; flex-direction: column; gap: 12px;">
-    <div style="display: flex; justify-content: space-between; font-size: 13px; color: var(--muted, #8C8175);">
-      <span>Item Total</span>
-      <span>₹548</span>
-    </div>
-    <div style="display: flex; justify-content: space-between; font-size: 13px; color: var(--muted, #8C8175);">
-      <span>Delivery Fee</span>
-      <span style="color: #4caf50; font-weight: 600;">FREE</span>
-    </div>
-    <div style="display: flex; justify-content: space-between; font-size: 13px; color: var(--muted, #8C8175);">
-      <span>Taxes & Charges</span>
-      <span>₹35</span>
-    </div>
-    <div style="display: flex; justify-content: space-between; font-size: 16px; font-weight: 700; color: var(--text, #F4EDE4); border-top: 1px dashed var(--border, #2A241F); padding-top: 10px;">
-      <span>To Pay</span>
-      <span style="color: #D9662C;">₹583</span>
-    </div>
-    <a href="profile.html#orders" class="btn btn-primary" style="width: 100%; justify-content: center; min-height: 46px; text-decoration: none;">Proceed to Pay (₹583) →</a>
-  </div>
-
-</div>
-</footer>
-
+<script src="main.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

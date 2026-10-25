@@ -4,16 +4,15 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Explore Menu — EMBER</title>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700;9..144,900&family=Inter+Tight:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700;9..144,900&family=Inter+Tight:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="common.css" />
   <link rel="stylesheet" href="explore.css" />
 </head>
 <body>
 
-<input type="checkbox" class="theme-check" />
+<input type="checkbox" id="themeCheck" class="theme-check" />
 <input type="checkbox" id="menuCheck" class="menu-check" />
-<input type="checkbox" id="cartCheck" style="display:none;" />
 
 <nav>
   <a href="home.html" class="wordmark">EMBER</a>
@@ -23,52 +22,29 @@
     <a href="restaurants.html">Restaurants</a>
     <a href="offers.html">Offers</a>
   </div>
-
   <div class="nav-search-box">
     <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
       <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
     </svg>
-    <input type="text" placeholder="Search biryani, pizza, burgers..." aria-label="Search dishes" />
+    <input type="text" placeholder="Search biryani, pizza, pasta, rolls..." aria-label="Search dishes" />
   </div>
-
   <div class="nav-right">
-    
     <label class="veg-toggle" title="Toggle Vegetarian / Non-Vegetarian" aria-label="Toggle Veg / Non-Veg">
-      <input type="checkbox" id="vegCheck" class="veg-check" />
-      <span class="veg-symbol veg-icon" title="Vegetarian">
-        <span class="symbol-box"><span class="symbol-circle"></span></span>
-      </span>
-      <div class="veg-toggle__track">
-        <div class="veg-toggle__thumb"></div>
-      </div>
-      <span class="veg-symbol nonveg-icon" title="Non-Vegetarian">
-        <span class="symbol-box"><span class="symbol-triangle"></span></span>
-      </span>
+      <input type="checkbox" id="vegCheck" class="veg-check" checked />
+      <span class="veg-symbol veg-icon" title="Vegetarian"><span class="symbol-box"><span class="symbol-circle"></span></span></span>
+      <div class="veg-toggle__track"><div class="veg-toggle__thumb"></div></div>
+      <span class="veg-symbol nonveg-icon" title="Non-Vegetarian"><span class="symbol-box"><span class="symbol-triangle"></span></span></span>
     </label>
-
     <label for="themeCheck" class="theme-toggle" title="Toggle Theme" aria-label="Toggle Theme">
       <svg class="theme-icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
       <svg class="theme-icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
     </label>
-
     <a href="profile.html" class="nav-profile-btn" title="My Profile" aria-label="Profile">
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-        <circle cx="12" cy="12" r="10"></circle>
-        <circle cx="12" cy="10" r="3.2"></circle>
-        <path d="M6.2 18.8C7.5 16.5 9.6 15.2 12 15.2C14.4 15.2 16.5 16.5 17.8 18.8"></path>
-      </svg>
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="10" r="3.2"></circle><path d="M6.2 18.8C7.5 16.5 9.6 15.2 12 15.2C14.4 15.2 16.5 16.5 17.8 18.8"></path></svg>
     </a>
-
     <a href="login.html" class="nav-auth-btn">Sign In</a>
-
     <a href="explore.html" class="btn btn-primary">Order now</a>
-
-    <label for="menuCheck" class="hamburger" aria-label="Toggle menu">
-      <span></span>
-      <span></span>
-      <span></span>
-    </label>
-
+    <label for="menuCheck" class="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></label>
   </div>
 </nav>
 
@@ -82,42 +58,86 @@
   <a href="signup.html">Sign Up</a>
 </div>
 
-<label for="cartCheck" class="floating-cart" title="View Cart" style="cursor: pointer;">
+<div class="floating-cart" title="View Cart">
   <div class="cart-left">
     <span class="cart-icon">🛒</span>
     <div class="cart-text">
-      <span class="cart-count">2 Items Added</span>
-      <span class="cart-price">₹548</span>
+      <span class="cart-count">Cart is empty</span>
+      <span class="cart-price">₹0</span>
     </div>
   </div>
   <span class="cart-cta">Checkout →</span>
-</label>
+</div>
 
 <section class="page-hero">
   <p class="eyebrow">Full culinary catalog</p>
   <h1>Explore Our Menu</h1>
-  <p class="hero-sub">From slow dum-cooked biryanis to wood-fired artisan sourdough pizzas — each recipe is cooked over live fire & glowing coal.</p>
+  <p class="hero-sub">From slow dum-cooked biryanis to wood-fired artisan pizzas — every dish crafted over live fire & glowing coal.</p>
 </section>
 
-<div class="filter-bar">
-  <a href="#biryani" class="filter-pill active">🍚 Biryani</a>
-  <a href="#pizza" class="filter-pill">🍕 Pizza & Pasta</a>
-  <a href="#burgers" class="filter-pill">🍔 Burgers</a>
-  <a href="#tandoor" class="filter-pill">🔥 Tandoor & Curries</a>
-  <a href="#desserts" class="filter-pill">🍰 Desserts</a>
+<div class="controls-bar">
+  <div class="filter-bar">
+    <a href="#biryani"     class="filter-pill active"><span class="pill-icon">🍚</span> Biryani</a>
+    <a href="#pizza"       class="filter-pill"><span class="pill-icon">🍕</span> Pizza & Pasta</a>
+    <a href="#burgers"     class="filter-pill"><span class="pill-icon">🍔</span> Burgers</a>
+    <a href="#tandoor"     class="filter-pill"><span class="pill-icon">🔥</span> Tandoor & Kebabs</a>
+    <a href="#northindian" class="filter-pill"><span class="pill-icon">🫕</span> Royal Curries</a>
+    <a href="#chinese"     class="filter-pill"><span class="pill-icon">🥡</span> Asian & Dimsums</a>
+    <a href="#streetfood"  class="filter-pill"><span class="pill-icon">🌯</span> Rolls & Chaat</a>
+    <a href="#healthy"     class="filter-pill"><span class="pill-icon">🥗</span> Artisan Bowls</a>
+    <a href="#desserts"    class="filter-pill"><span class="pill-icon">🍰</span> Shakes & Desserts</a>
+  </div>
+  <div class="sort-bar-wrap">
+    <div class="sort-header">
+      <div class="sort-title-group">
+        <svg class="sort-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="4" y1="6" x2="20" y2="6"></line>
+          <line x1="7" y1="12" x2="17" y2="12"></line>
+          <line x1="10" y1="18" x2="14" y2="18"></line>
+        </svg>
+        <span class="sort-label">Sort:</span>
+      </div>
+      <div class="sort-chips">
+        <button class="sort-btn active" data-sort="relevance">
+          <span class="sort-dot"></span>
+          <span>⚡ Relevance</span>
+        </button>
+        <button class="sort-btn" data-sort="price-asc">
+          <span class="sort-dot"></span>
+          <span>Price: Low to High ↑</span>
+        </button>
+        <button class="sort-btn" data-sort="price-desc">
+          <span class="sort-dot"></span>
+          <span>Price: High to Low ↓</span>
+        </button>
+        <button class="sort-btn" data-sort="rating">
+          <span class="sort-dot"></span>
+          <span>⭐ Top Rated</span>
+        </button>
+        <button class="sort-btn" data-sort="time">
+          <span class="sort-dot"></span>
+          <span>⏱️ Fastest Delivery</span>
+        </button>
+      </div>
+    </div>
+  </div>
 </div>
 
 <section class="section" id="biryani">
   <div class="section-head">
-    <h2 class="section-title">Dum Biryani & Rice</h2>
-    <span class="eyebrow">Slow cooked over coal</span>
+    <div>
+      <h2 class="section-title">Dum Biryani & Rice</h2>
+      <span class="eyebrow">Slow cooked over fragrant coal</span>
+    </div>
+    <span class="dish-count-badge">4 dishes</span>
   </div>
   <div class="menu-grid">
 
-    <div class="dish-card nonveg-card">
+    <div class="dish-card nonveg-card" data-name="Chicken Dum Biryani" data-price="349" data-rating="4.9" data-time="28" data-veg="false" data-category="biryani">
       <div class="img-box img-rel">
-        <img src="https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=700&q=85&auto=format&fit=crop" alt="Chicken Dum Biryani" loading="lazy" />
+        <img src="https://images.unsplash.com/photo-1589302168068-964664d93dc0?w=600&q=80&auto=format&fit=crop" alt="Chicken Dum Biryani" loading="lazy" />
         <span class="dish-tag">Chef's Signature</span>
+        <span class="dish-badge nonveg-badge">Non-Veg</span>
       </div>
       <div class="dish-body">
         <h3 class="dish-name"><span class="dish-dot nonveg"></span>Chicken Dum Biryani</h3>
@@ -126,81 +146,160 @@
           <span class="price">₹349</span>
           <span class="divider"></span>
           <span class="rating">⭐ 4.9</span>
-          <button class="add-btn">+</button>
+          <span class="divider"></span>
+          <span class="del-time">🕐 28 min</span>
+          <button class="add-btn" aria-label="Add to cart">+</button>
         </div>
       </div>
     </div>
 
-    <div class="dish-card nonveg-card">
-      <div class="img-box"><img src="https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?w=400&q=80&auto=format&fit=crop" alt="Mutton Biryani" loading="lazy" /></div>
+    <div class="dish-card nonveg-card" data-name="Mutton Gosht Biryani" data-price="489" data-rating="4.9" data-time="35" data-veg="false" data-category="biryani">
+      <div class="img-box img-rel">
+        <img src="https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?w=600&q=80&auto=format&fit=crop" alt="Mutton Biryani" loading="lazy" />
+        <span class="dish-tag">Royal Feast</span>
+        <span class="dish-badge nonveg-badge">Non-Veg</span>
+      </div>
       <div class="dish-body">
         <h3 class="dish-name"><span class="dish-dot nonveg"></span>Mutton Gosht Biryani</h3>
-        <p class="dish-desc">Melt-in-mouth succulent lamb chunks marinated overnight with Awadhi spices.</p>
-        <div class="meta-row"><span class="price">₹489</span><span class="divider"></span><span class="rating">⭐ 4.9</span><button class="add-btn">+</button></div>
+        <p class="dish-desc">Succulent lamb cuts marinated in aged spices, dum-cooked on charcoal with saffron milk & caramelised shallots.</p>
+        <div class="meta-row">
+          <span class="price">₹489</span>
+          <span class="divider"></span>
+          <span class="rating">⭐ 4.9</span>
+          <span class="divider"></span>
+          <span class="del-time">🕐 35 min</span>
+          <button class="add-btn" aria-label="Add to cart">+</button>
+        </div>
       </div>
     </div>
 
-    <div class="dish-card">
-      <div class="img-box"><img src="https://images.unsplash.com/photo-1633945274405-b6c8069047b0?w=400&q=80&auto=format&fit=crop" alt="Paneer Biryani" loading="lazy" /></div>
+    <div class="dish-card veg-card" data-name="Smoked Paneer Dum Biryani" data-price="299" data-rating="4.7" data-time="22" data-veg="true" data-category="biryani">
+      <div class="img-box img-rel">
+        <img src="https://images.unsplash.com/photo-1633945274405-b6c8069047b0?w=600&q=80&auto=format&fit=crop" alt="Paneer Biryani" loading="lazy" />
+        <span class="dish-badge veg-badge">Pure Veg</span>
+      </div>
       <div class="dish-body">
-        <h3 class="dish-name"><span class="dish-dot veg"></span>Smoked Paneer Biryani</h3>
-        <p class="dish-desc">Clay oven charred cottage cheese cubes layered with aromatic saffron rice and mint.</p>
-        <div class="meta-row"><span class="price">₹319</span><span class="divider"></span><span class="rating">⭐ 4.8</span><button class="add-btn">+</button></div>
+        <h3 class="dish-name"><span class="dish-dot veg"></span>Smoked Paneer Dum Biryani</h3>
+        <p class="dish-desc">Malai paneer cubes char-smoked over embers, layered with spiced basmati, fresh mint & toasted cashews.</p>
+        <div class="meta-row">
+          <span class="price">₹299</span>
+          <span class="divider"></span>
+          <span class="rating">⭐ 4.7</span>
+          <span class="divider"></span>
+          <span class="del-time">🕐 22 min</span>
+          <button class="add-btn" aria-label="Add to cart">+</button>
+        </div>
       </div>
     </div>
 
-    <div class="dish-card nonveg-card">
-      <div class="img-box"><img src="https://images.unsplash.com/photo-1512058564366-18510be2db19?w=400&q=80&auto=format&fit=crop" alt="Egg Biryani" loading="lazy" /></div>
+    <div class="dish-card nonveg-card" data-name="Hyderabadi Egg Dum Biryani" data-price="269" data-rating="4.8" data-time="20" data-veg="false" data-category="biryani">
+      <div class="img-box img-rel">
+        <img src="https://images.unsplash.com/photo-1512058564366-18510be2db19?w=600&q=80&auto=format&fit=crop" alt="Egg Biryani" loading="lazy" />
+        <span class="dish-badge nonveg-badge">Non-Veg</span>
+      </div>
       <div class="dish-body">
-        <h3 class="dish-name"><span class="dish-dot nonveg"></span>Hyderabadi Egg Biryani</h3>
-        <p class="dish-desc">Golden roasted eggs tossed in caramelized onions, mint, and aromatic spiced basmati rice.</p>
-        <div class="meta-row"><span class="price">₹279</span><span class="divider"></span><span class="rating">⭐ 4.7</span><button class="add-btn">+</button></div>
+        <h3 class="dish-name"><span class="dish-dot nonveg"></span>Hyderabadi Egg Dum Biryani</h3>
+        <p class="dish-desc">Golden pan-seared spiced eggs nestled in fragrant kacchi-style biryani rice, served with mirchi ka salan.</p>
+        <div class="meta-row">
+          <span class="price">₹269</span>
+          <span class="divider"></span>
+          <span class="rating">⭐ 4.8</span>
+          <span class="divider"></span>
+          <span class="del-time">🕐 20 min</span>
+          <button class="add-btn" aria-label="Add to cart">+</button>
+        </div>
       </div>
     </div>
 
   </div>
 </section>
 
-<section class="section" id="pizza">
+<section class="section section-alt" id="pizza">
   <div class="section-head">
-    <h2 class="section-title">Wood-Fired Pizzas & Pastas</h2>
-    <span class="eyebrow">48-hour fermented dough</span>
+    <div>
+      <h2 class="section-title">Woodfired Pizzas & Pastas</h2>
+      <span class="eyebrow">48-hour fermented dough & fresh pasta</span>
+    </div>
+    <span class="dish-count-badge">5 dishes</span>
   </div>
   <div class="menu-grid">
 
-    <div class="dish-card">
-      <div class="img-box"><img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?w=600&q=80&auto=format&fit=crop" alt="Margherita Pizza" loading="lazy" /></div>
+    <div class="dish-card veg-card" data-name="Wood-fired Margherita" data-price="399" data-rating="4.8" data-time="20" data-veg="true" data-category="pizza">
+      <div class="img-box img-rel">
+        <img src="https://images.unsplash.com/photo-1604382355076-af4b0eb60143?w=600&q=80&auto=format&fit=crop" alt="Margherita Pizza" loading="lazy" />
+        <span class="dish-tag">Bestseller</span>
+        <span class="dish-badge veg-badge">Pure Veg</span>
+      </div>
       <div class="dish-body">
         <h3 class="dish-name"><span class="dish-dot veg"></span>Wood-fired Margherita</h3>
-        <p class="dish-desc">San Marzano tomatoes, fresh buffalo mozzarella, fresh basil, extra virgin olive oil.</p>
-        <div class="meta-row"><span class="price">₹399</span><span class="divider"></span><span class="rating">⭐ 4.8</span><button class="add-btn">+</button></div>
+        <p class="dish-desc">San Marzano DOP tomatoes, buffalo mozzarella, fresh sweet basil, and extra virgin olive oil on bubbly crust.</p>
+        <div class="meta-row">
+          <span class="price">₹399</span>
+          <span class="divider"></span>
+          <span class="rating">⭐ 4.8</span>
+          <span class="divider"></span>
+          <span class="del-time">🕐 20 min</span>
+          <button class="add-btn" aria-label="Add to cart">+</button>
+        </div>
       </div>
     </div>
 
-    <div class="dish-card nonveg-card">
-      <div class="img-box"><img src="https://images.unsplash.com/photo-1628840042765-356cda07504e?w=600&q=80&auto=format&fit=crop" alt="Smoked Pepperoni" loading="lazy" /></div>
+    <div class="dish-card nonveg-card" data-name="Charred Pepperoni" data-price="499" data-rating="4.9" data-time="22" data-veg="false" data-category="pizza">
+      <div class="img-box img-rel">
+        <img src="https://images.unsplash.com/photo-1628840042765-356cda07504e?w=600&q=80&auto=format&fit=crop" alt="Pepperoni Pizza" loading="lazy" />
+        <span class="dish-badge nonveg-badge">Non-Veg</span>
+      </div>
       <div class="dish-body">
         <h3 class="dish-name"><span class="dish-dot nonveg"></span>Charred Pepperoni</h3>
-        <p class="dish-desc">Artisan pepperoni slices, hot honey drizzle, charred crust with mozzarella blend.</p>
-        <div class="meta-row"><span class="price">₹499</span><span class="divider"></span><span class="rating">⭐ 4.9</span><button class="add-btn">+</button></div>
+        <p class="dish-desc">Crisp spiced pepperoni cups, hot honey drizzle, aged mozzarella, and charred blistered crust.</p>
+        <div class="meta-row">
+          <span class="price">₹499</span>
+          <span class="divider"></span>
+          <span class="rating">⭐ 4.9</span>
+          <span class="divider"></span>
+          <span class="del-time">🕐 22 min</span>
+          <button class="add-btn" aria-label="Add to cart">+</button>
+        </div>
       </div>
     </div>
 
-    <div class="dish-card">
-      <div class="img-box"><img src="https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?w=600&q=80&auto=format&fit=crop" alt="Truffle Mushroom Pasta" loading="lazy" /></div>
-      <div class="dish-body">
-        <h3 class="dish-name"><span class="dish-dot veg"></span>Truffle Cream Fettuccine</h3>
-        <p class="dish-desc">Handmade pasta tossed in wild porcini mushroom truffle sauce with parmesan crisp.</p>
-        <div class="meta-row"><span class="price">₹429</span><span class="divider"></span><span class="rating">⭐ 4.9</span><button class="add-btn">+</button></div>
-      </div>
-    </div>
+    
 
-    <div class="dish-card nonveg-card">
-      <div class="img-box"><img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=600&q=80&auto=format&fit=crop" alt="Smoked Chicken BBQ Pizza" loading="lazy" /></div>
+    <div class="dish-card nonveg-card" data-name="Smoked BBQ Chicken Pizza" data-price="469" data-rating="4.7" data-time="25" data-veg="false" data-category="pizza">
+      <div class="img-box img-rel">
+        <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=600&q=80&auto=format&fit=crop" alt="BBQ Chicken Pizza" loading="lazy" />
+        <span class="dish-badge nonveg-badge">Non-Veg</span>
+      </div>
       <div class="dish-body">
         <h3 class="dish-name"><span class="dish-dot nonveg"></span>Smoked BBQ Chicken Pizza</h3>
-        <p class="dish-desc">Hickory smoked chicken chunks, red onions, gouda blend, and house sweet-tangy BBQ glaze.</p>
-        <div class="meta-row"><span class="price">₹469</span><span class="divider"></span><span class="rating">⭐ 4.9</span><button class="add-btn">+</button></div>
+        <p class="dish-desc">Charcoal-grilled BBQ chicken cubes, smoked gouda, red onions, and fresh cilantro on sourdough base.</p>
+        <div class="meta-row">
+          <span class="price">₹469</span>
+          <span class="divider"></span>
+          <span class="rating">⭐ 4.7</span>
+          <span class="divider"></span>
+          <span class="del-time">🕐 25 min</span>
+          <button class="add-btn" aria-label="Add to cart">+</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="dish-card veg-card" data-name="Charred Arrabiata Penne" data-price="360" data-rating="4.7" data-time="16" data-veg="true" data-category="pizza">
+      <div class="img-box img-rel">
+        <img src="https://images.unsplash.com/photo-1551183053-bf91a1d81141?w=600&q=80&auto=format&fit=crop" alt="Arrabiata Penne" loading="lazy" />
+        <span class="dish-badge veg-badge">Pure Veg</span>
+      </div>
+      <div class="dish-body">
+        <h3 class="dish-name"><span class="dish-dot veg"></span>Charred Arrabiata Penne</h3>
+        <p class="dish-desc">Al dente penne in fiery garlic San Marzano sauce, fresh torn basil, charred cherry tomatoes, and pecorino.</p>
+        <div class="meta-row">
+          <span class="price">₹360</span>
+          <span class="divider"></span>
+          <span class="rating">⭐ 4.7</span>
+          <span class="divider"></span>
+          <span class="del-time">🕐 16 min</span>
+          <button class="add-btn" aria-label="Add to cart">+</button>
+        </div>
       </div>
     </div>
 
@@ -209,90 +308,538 @@
 
 <section class="section" id="burgers">
   <div class="section-head">
-    <h2 class="section-title">Flame-Seared Burgers</h2>
-    <span class="eyebrow">House ground patties</span>
+    <div>
+      <h2 class="section-title">Handcrafted Burgers</h2>
+      <span class="eyebrow">Toasted brioche & freshly smashed patties</span>
+    </div>
+    <span class="dish-count-badge">4 dishes</span>
   </div>
   <div class="menu-grid">
 
-    <div class="dish-card nonveg-card">
-      <div class="img-box"><img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=600&q=80&auto=format&fit=crop" alt="Double Smash Burger" loading="lazy" /></div>
+    <div class="dish-card nonveg-card" data-name="Double Smash Burger" data-price="299" data-rating="4.7" data-time="18" data-veg="false" data-category="burgers">
+      <div class="img-box img-rel">
+        <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=600&q=85&auto=format&fit=crop" alt="Double Smash Burger" loading="lazy" />
+        <span class="dish-tag">Double Patty</span>
+        <span class="dish-badge nonveg-badge">Non-Veg</span>
+      </div>
       <div class="dish-body">
         <h3 class="dish-name"><span class="dish-dot nonveg"></span>Double Smash Burger</h3>
-        <p class="dish-desc">Double smashed crusty beef/lamb patty, American cheese, pickles & smokey secret sauce.</p>
-        <div class="meta-row"><span class="price">₹299</span><span class="divider"></span><span class="rating">⭐ 4.7</span><button class="add-btn">+</button></div>
+        <p class="dish-desc">Two smashed chicken patties, double American cheddar, pickles, grilled onions, and house ember sauce on brioche.</p>
+        <div class="meta-row">
+          <span class="price">₹299</span>
+          <span class="divider"></span>
+          <span class="rating">⭐ 4.7</span>
+          <span class="divider"></span>
+          <span class="del-time">🕐 18 min</span>
+          <button class="add-btn" aria-label="Add to cart">+</button>
+        </div>
       </div>
     </div>
 
-    <div class="dish-card nonveg-card">
-      <div class="img-box"><img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=600&q=80&auto=format&fit=crop" alt="Fiery Crisp Chicken" loading="lazy" /></div>
+    <div class="dish-card nonveg-card" data-name="Fiery Buttermilk Fried Chicken" data-price="319" data-rating="4.8" data-time="20" data-veg="false" data-category="burgers">
+      <div class="img-box img-rel">
+        <img src="https://images.unsplash.com/photo-1625813506062-0aeb1d7a094b?w=600&q=80&auto=format&fit=crop" alt="Buttermilk Fried Chicken Burger" loading="lazy" />
+        <span class="dish-badge nonveg-badge">Non-Veg</span>
+      </div>
       <div class="dish-body">
-        <h3 class="dish-name"><span class="dish-dot nonveg"></span>Fiery Buttermilk Chicken</h3>
-        <p class="dish-desc">24h marinated chicken thigh fried ultra-crisp, Nashville hot dip, tangy coleslaw.</p>
-        <div class="meta-row"><span class="price">₹319</span><span class="divider"></span><span class="rating">⭐ 4.9</span><button class="add-btn">+</button></div>
+        <h3 class="dish-name"><span class="dish-dot nonveg"></span>Fiery Buttermilk Fried Chicken</h3>
+        <p class="dish-desc">24-hour buttermilk soaked crispy chicken thigh, habanero dust, creamy purple slaw, and jalapeño mayo.</p>
+        <div class="meta-row">
+          <span class="price">₹319</span>
+          <span class="divider"></span>
+          <span class="rating">⭐ 4.8</span>
+          <span class="divider"></span>
+          <span class="del-time">🕐 20 min</span>
+          <button class="add-btn" aria-label="Add to cart">+</button>
+        </div>
       </div>
     </div>
 
-    <div class="dish-card">
-      <div class="img-box"><img src="https://images.unsplash.com/photo-1550547660-d9450f859349?w=600&q=80&auto=format&fit=crop" alt="Smoked Truffle Veggie Burger" loading="lazy" /></div>
+    <div class="dish-card veg-card" data-name="Smoked Portobello & Cheese" data-price="279" data-rating="4.6" data-time="15" data-veg="true" data-category="burgers">
+      <div class="img-box img-rel">
+        <img src="https://images.unsplash.com/photo-1550547660-d9450f859349?w=600&q=80&auto=format&fit=crop" alt="Portobello Burger" loading="lazy" />
+        <span class="dish-badge veg-badge">Pure Veg</span>
+      </div>
       <div class="dish-body">
         <h3 class="dish-name"><span class="dish-dot veg"></span>Smoked Portobello & Cheese</h3>
-        <p class="dish-desc">Grilled portobello cap, caramelised balsamic onions, aged cheddar & brioche bun.</p>
-        <div class="meta-row"><span class="price">₹279</span><span class="divider"></span><span class="rating">⭐ 4.6</span><button class="add-btn">+</button></div>
+        <p class="dish-desc">Charred whole portobello mushroom stuffed with smoked scamorza cheese, garlic confit, and baby arugula.</p>
+        <div class="meta-row">
+          <span class="price">₹279</span>
+          <span class="divider"></span>
+          <span class="rating">⭐ 4.6</span>
+          <span class="divider"></span>
+          <span class="del-time">🕐 15 min</span>
+          <button class="add-btn" aria-label="Add to cart">+</button>
+        </div>
       </div>
     </div>
 
-    <div class="dish-card">
-      <div class="img-box"><img src="https://images.unsplash.com/photo-1520072959219-c595dc870360?w=600&q=80&auto=format&fit=crop" alt="Crispy Peri Peri Paneer Burger" loading="lazy" /></div>
+    <div class="dish-card veg-card" data-name="Peri Peri Paneer Crunch" data-price="259" data-rating="4.7" data-time="18" data-veg="true" data-category="burgers">
+      <div class="img-box img-rel">
+        <img src="https://images.unsplash.com/photo-1586190848861-99aa4a171e90?w=600&q=80&auto=format&fit=crop" alt="Peri Peri Paneer Burger" loading="lazy" />
+        <span class="dish-badge veg-badge">Pure Veg</span>
+      </div>
       <div class="dish-body">
         <h3 class="dish-name"><span class="dish-dot veg"></span>Peri Peri Paneer Crunch</h3>
-        <p class="dish-desc">Spiced panko crusted paneer steak, fiery chipotle mayo, crunchy lettuce, and cheddar.</p>
-        <div class="meta-row"><span class="price">₹259</span><span class="divider"></span><span class="rating">⭐ 4.8</span><button class="add-btn">+</button></div>
+        <p class="dish-desc">Panko-crusted cottage cheese block drenched in peri-peri spice glaze, crunchy iceberg, and mint mayo on potato bun.</p>
+        <div class="meta-row">
+          <span class="price">₹259</span>
+          <span class="divider"></span>
+          <span class="rating">⭐ 4.7</span>
+          <span class="divider"></span>
+          <span class="del-time">🕐 18 min</span>
+          <button class="add-btn" aria-label="Add to cart">+</button>
+        </div>
       </div>
     </div>
 
   </div>
 </section>
 
-<section class="section" id="tandoor">
+<section class="section section-alt" id="tandoor">
   <div class="section-head">
-    <h2 class="section-title">Tandoor & Curries</h2>
-    <span class="eyebrow">Clay oven specialities</span>
+    <div>
+      <h2 class="section-title">Charcoal Tandoor & Kebabs</h2>
+      <span class="eyebrow">Smoked in traditional clay ovens</span>
+    </div>
+    <span class="dish-count-badge">4 dishes</span>
   </div>
   <div class="menu-grid">
 
-    <div class="dish-card nonveg-card">
-      <div class="img-box"><img src="https://images.unsplash.com/photo-1567188040759-fb8a883dc6d8?w=600&q=80&auto=format&fit=crop" alt="Butter Chicken" loading="lazy" /></div>
+    <div class="dish-card nonveg-card" data-name="Old Delhi Butter Chicken" data-price="320" data-rating="4.9" data-time="25" data-veg="false" data-category="tandoor">
+      <div class="img-box img-rel">
+        <img src="https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?w=600&q=80&auto=format&fit=crop" alt="Butter Chicken" loading="lazy" />
+        <span class="dish-tag">Top Choice</span>
+        <span class="dish-badge nonveg-badge">Non-Veg</span>
+      </div>
       <div class="dish-body">
         <h3 class="dish-name"><span class="dish-dot nonveg"></span>Old Delhi Butter Chicken</h3>
-        <p class="dish-desc">Tandoori chicken pulled and simmered in velvet makhani gravy with fenugreek & cream.</p>
-        <div class="meta-row"><span class="price">₹320</span><span class="divider"></span><span class="rating">⭐ 4.9</span><button class="add-btn">+</button></div>
+        <p class="dish-desc">Tandoor-roasted chicken in rich velvety tomato-cream sauce with kasuri methi, served with hot butter naan.</p>
+        <div class="meta-row">
+          <span class="price">₹320</span>
+          <span class="divider"></span>
+          <span class="rating">⭐ 4.9</span>
+          <span class="divider"></span>
+          <span class="del-time">🕐 25 min</span>
+          <button class="add-btn" aria-label="Add to cart">+</button>
+        </div>
       </div>
     </div>
 
-    <div class="dish-card">
-      <div class="img-box"><img src="https://images.unsplash.com/photo-1588166524941-3bf61a9c41db?w=600&q=80&auto=format&fit=crop" alt="Dal Makhani" loading="lazy" /></div>
-      <div class="dish-body">
-        <h3 class="dish-name"><span class="dish-dot veg"></span>Coal-Simmered Dal Makhani</h3>
-        <p class="dish-desc">Black lentils slow-cooked overnight over glowing wood embers with rich butter & cream.</p>
-        <div class="meta-row"><span class="price">₹260</span><span class="divider"></span><span class="rating">⭐ 4.9</span><button class="add-btn">+</button></div>
+    <div class="dish-card veg-card" data-name="Bhatinda Paneer Tikka" data-price="280" data-rating="4.8" data-time="20" data-veg="true" data-category="tandoor">
+      <div class="img-box img-rel">
+        <img src="https://images.unsplash.com/photo-1599488615731-7e5c2823ff28?w=600&q=80&auto=format&fit=crop" alt="Paneer Tikka" loading="lazy" />
+        <span class="dish-badge veg-badge">Pure Veg</span>
       </div>
-    </div>
-
-    <div class="dish-card">
-      <div class="img-box"><img src="https://images.unsplash.com/photo-1599488615731-7e5c2823ff28?w=600&q=80&auto=format&fit=crop" alt="Paneer Tikka" loading="lazy" /></div>
       <div class="dish-body">
         <h3 class="dish-name"><span class="dish-dot veg"></span>Bhatinda Paneer Tikka</h3>
-        <p class="dish-desc">Mustard & hung curd marinated cottage cheese skewered with peppers and charred.</p>
-        <div class="meta-row"><span class="price">₹280</span><span class="divider"></span><span class="rating">⭐ 4.8</span><button class="add-btn">+</button></div>
+        <p class="dish-desc">Malai paneer cubes skewered with bell peppers and baby onions, smoked over charcoal and dusted with chaat masala.</p>
+        <div class="meta-row">
+          <span class="price">₹280</span>
+          <span class="divider"></span>
+          <span class="rating">⭐ 4.8</span>
+          <span class="divider"></span>
+          <span class="del-time">🕐 20 min</span>
+          <button class="add-btn" aria-label="Add to cart">+</button>
+        </div>
       </div>
     </div>
 
-    <div class="dish-card nonveg-card">
-      <div class="img-box"><img src="https://images.unsplash.com/photo-1544025162-d76694265947?w=600&q=80&auto=format&fit=crop" alt="Charcoal Seekh Kebab" loading="lazy" /></div>
+    <div class="dish-card veg-card" data-name="Coal-Simmered Dal Makhani" data-price="260" data-rating="4.9" data-time="15" data-veg="true" data-category="tandoor">
+      <div class="img-box img-rel">
+        <img src="https://images.unsplash.com/photo-1588166524941-3bf61a9c41db?w=600&q=80&auto=format&fit=crop" alt="Dal Makhani" loading="lazy" />
+        <span class="dish-badge veg-badge">Pure Veg</span>
+      </div>
+      <div class="dish-body">
+        <h3 class="dish-name"><span class="dish-dot veg"></span>Coal-Simmered Dal Makhani</h3>
+        <p class="dish-desc">Urad lentils slow-cooked overnight over glowing coals with churned butter and fresh cream. Pure silk.</p>
+        <div class="meta-row">
+          <span class="price">₹260</span>
+          <span class="divider"></span>
+          <span class="rating">⭐ 4.9</span>
+          <span class="divider"></span>
+          <span class="del-time">🕐 15 min</span>
+          <button class="add-btn" aria-label="Add to cart">+</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="dish-card nonveg-card" data-name="Charcoal Lamb Seekh" data-price="360" data-rating="4.8" data-time="22" data-veg="false" data-category="tandoor">
+      <div class="img-box img-rel">
+        <img src="https://images.unsplash.com/photo-1544025162-d76694265947?w=600&q=80&auto=format&fit=crop" alt="Lamb Seekh Kebab" loading="lazy" />
+        <span class="dish-badge nonveg-badge">Non-Veg</span>
+      </div>
       <div class="dish-body">
         <h3 class="dish-name"><span class="dish-dot nonveg"></span>Charcoal Lamb Seekh</h3>
-        <p class="dish-desc">Mincemeat infused with roasted coriander, mint, green chilies, and grilled over coal.</p>
-        <div class="meta-row"><span class="price">₹340</span><span class="divider"></span><span class="rating">⭐ 4.9</span><button class="add-btn">+</button></div>
+        <p class="dish-desc">Minced prime lamb skewers seasoned with Kashmiri red chilli, coriander seeds, and brown onion paste.</p>
+        <div class="meta-row">
+          <span class="price">₹360</span>
+          <span class="divider"></span>
+          <span class="rating">⭐ 4.8</span>
+          <span class="divider"></span>
+          <span class="del-time">🕐 22 min</span>
+          <button class="add-btn" aria-label="Add to cart">+</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="section" id="northindian">
+  <div class="section-head">
+    <div>
+      <h2 class="section-title">Royal North Indian Curries</h2>
+      <span class="eyebrow">Rich gravies, slow-cooked thalis & feasts</span>
+    </div>
+    <span class="dish-count-badge">5 dishes</span>
+  </div>
+  <div class="menu-grid">
+
+    <div class="dish-card nonveg-card" data-name="Chicken Tikka Masala" data-price="340" data-rating="4.8" data-time="24" data-veg="false" data-category="northindian">
+      <div class="img-box img-rel">
+        <img src="https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=600&q=80&auto=format&fit=crop" alt="Chicken Tikka Masala" loading="lazy" />
+        <span class="dish-badge nonveg-badge">Non-Veg</span>
+      </div>
+      <div class="dish-body">
+        <h3 class="dish-name"><span class="dish-dot nonveg"></span>Chicken Tikka Masala</h3>
+        <p class="dish-desc">Char-grilled tandoori chicken tikka simmered in rich spiced onion-tomato gravy with capsicum and fresh coriander.</p>
+        <div class="meta-row">
+          <span class="price">₹340</span>
+          <span class="divider"></span>
+          <span class="rating">⭐ 4.8</span>
+          <span class="divider"></span>
+          <span class="del-time">🕐 24 min</span>
+          <button class="add-btn" aria-label="Add to cart">+</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="dish-card veg-card" data-name="Royal Veg Thali" data-price="399" data-rating="4.9" data-time="25" data-veg="true" data-category="northindian">
+      <div class="img-box img-rel">
+        <img src="https://images.unsplash.com/photo-1610057099443-fde8c4d50f91?w=600&q=80&auto=format&fit=crop" alt="Royal Veg Thali" loading="lazy" />
+        <span class="dish-tag">Complete Meal</span>
+        <span class="dish-badge veg-badge">Pure Veg</span>
+      </div>
+      <div class="dish-body">
+        <h3 class="dish-name"><span class="dish-dot veg"></span>Royal Veg Thali</h3>
+        <p class="dish-desc">Paneer makhani, dal makhani, seasonal sabzi, jeera rice, 2 butter naans, raita, salad, and gulab jamun.</p>
+        <div class="meta-row">
+          <span class="price">₹399</span>
+          <span class="divider"></span>
+          <span class="rating">⭐ 4.9</span>
+          <span class="divider"></span>
+          <span class="del-time">🕐 25 min</span>
+          <button class="add-btn" aria-label="Add to cart">+</button>
+        </div>
+      </div>
+    </div>
+
+
+
+    <div class="dish-card veg-card" data-name="Amritsari Chole Bhature" data-price="199" data-rating="4.8" data-time="15" data-veg="true" data-category="northindian">
+      <div class="img-box img-rel">
+        <img src="https://images.unsplash.com/photo-1626777552726-4a6b54c97e46?w=600&q=80&auto=format&fit=crop" alt="Chole Bhature" loading="lazy" />
+        <span class="dish-badge veg-badge">Pure Veg</span>
+      </div>
+      <div class="dish-body">
+        <h3 class="dish-name"><span class="dish-dot veg"></span>Amritsari Chole Bhature</h3>
+        <p class="dish-desc">Two fluffy golden puffed bhature served with slow-cooked spicy dark Punjabi chole, pickled onions & green chutney.</p>
+        <div class="meta-row">
+          <span class="price">₹199</span>
+          <span class="divider"></span>
+          <span class="rating">⭐ 4.8</span>
+          <span class="divider"></span>
+          <span class="del-time">🕐 15 min</span>
+          <button class="add-btn" aria-label="Add to cart">+</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="dish-card nonveg-card" data-name="Kashmiri Mutton Rogan Josh" data-price="449" data-rating="4.9" data-time="30" data-veg="false" data-category="northindian">
+      <div class="img-box img-rel">
+        <img src="https://images.unsplash.com/photo-1545247181-516773cae754?w=600&q=80&auto=format&fit=crop" alt="Rogan Josh" loading="lazy" />
+        <span class="dish-badge nonveg-badge">Non-Veg</span>
+      </div>
+      <div class="dish-body">
+        <h3 class="dish-name"><span class="dish-dot nonveg"></span>Kashmiri Mutton Rogan Josh</h3>
+        <p class="dish-desc">Tender slow-braised mutton in deep red gravy flavoured with Kashmiri mirch, ratanjot, fennel, and dry ginger.</p>
+        <div class="meta-row">
+          <span class="price">₹449</span>
+          <span class="divider"></span>
+          <span class="rating">⭐ 4.9</span>
+          <span class="divider"></span>
+          <span class="del-time">🕐 30 min</span>
+          <button class="add-btn" aria-label="Add to cart">+</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="section section-alt" id="chinese">
+  <div class="section-head">
+    <div>
+      <h2 class="section-title">Asian Wok, Noodles & Dimsums</h2>
+      <span class="eyebrow">High flame wok-tossed delights</span>
+    </div>
+    <span class="dish-count-badge">4 dishes</span>
+  </div>
+  <div class="menu-grid">
+
+    <div class="dish-card nonveg-card" data-name="Szechuan Chilli Chicken" data-price="310" data-rating="4.8" data-time="18" data-veg="false" data-category="chinese">
+      <div class="img-box img-rel">
+        <img src="https://images.unsplash.com/photo-1569050467447-ce54b3bbc37d?w=600&q=80&auto=format&fit=crop" alt="Chilli Chicken" loading="lazy" />
+        <span class="dish-badge nonveg-badge">Non-Veg</span>
+      </div>
+      <div class="dish-body">
+        <h3 class="dish-name"><span class="dish-dot nonveg"></span>Szechuan Chilli Chicken</h3>
+        <p class="dish-desc">Crispy boneless chicken tossed with charred dry chillies, crunchy bell peppers, garlic, and hot Szechuan pepper oil.</p>
+        <div class="meta-row">
+          <span class="price">₹310</span>
+          <span class="divider"></span>
+          <span class="rating">⭐ 4.8</span>
+          <span class="divider"></span>
+          <span class="del-time">🕐 18 min</span>
+          <button class="add-btn" aria-label="Add to cart">+</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="dish-card veg-card" data-name="Burnt Garlic Hakka Noodles" data-price="240" data-rating="4.7" data-time="16" data-veg="true" data-category="chinese">
+      <div class="img-box img-rel">
+        <img src="https://images.unsplash.com/photo-1585032226651-759b368d7246?w=600&q=80&auto=format&fit=crop" alt="Hakka Noodles" loading="lazy" />
+        <span class="dish-badge veg-badge">Pure Veg</span>
+      </div>
+      <div class="dish-body">
+        <h3 class="dish-name"><span class="dish-dot veg"></span>Burnt Garlic Hakka Noodles</h3>
+        <p class="dish-desc">Fresh eggless noodles tossed in smoking wok with golden roasted garlic, crunchy scallions, and light soya sauce.</p>
+        <div class="meta-row">
+          <span class="price">₹240</span>
+          <span class="divider"></span>
+          <span class="rating">⭐ 4.7</span>
+          <span class="divider"></span>
+          <span class="del-time">🕐 16 min</span>
+          <button class="add-btn" aria-label="Add to cart">+</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="dish-card veg-card" data-name="Tibetan Steam Momos" data-price="180" data-rating="4.8" data-time="14" data-veg="true" data-category="chinese">
+      <div class="img-box img-rel">
+        <img src="https://images.unsplash.com/photo-1625220194771-7ebdea0b70b9?w=600&q=80&auto=format&fit=crop" alt="Steam Momos" loading="lazy" />
+        <span class="dish-badge veg-badge">Pure Veg</span>
+      </div>
+      <div class="dish-body">
+        <h3 class="dish-name"><span class="dish-dot veg"></span>Tibetan Steam Momos</h3>
+        <p class="dish-desc">Delicate thin-wrapper steamed dumplings filled with finely minced spiced vegetables, served with house fiery red dip.</p>
+        <div class="meta-row">
+          <span class="price">₹180</span>
+          <span class="divider"></span>
+          <span class="rating">⭐ 4.8</span>
+          <span class="divider"></span>
+          <span class="del-time">🕐 14 min</span>
+          <button class="add-btn" aria-label="Add to cart">+</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="dish-card nonveg-card" data-name="Dragon Butter Prawns" data-price="390" data-rating="4.9" data-time="20" data-veg="false" data-category="chinese">
+      <div class="img-box img-rel">
+        <img src="https://images.unsplash.com/photo-1559847844-5315695dadae?w=600&q=80&auto=format&fit=crop" alt="Dragon Butter Prawns" loading="lazy" />
+        <span class="dish-tag">Chef's Special</span>
+        <span class="dish-badge nonveg-badge">Non-Veg</span>
+      </div>
+      <div class="dish-body">
+        <h3 class="dish-name"><span class="dish-dot nonveg"></span>Dragon Butter Prawns</h3>
+        <p class="dish-desc">Jumbo butterflied prawns sautéed in rich garlic butter, tossed with red chillies, spring greens, and five-spice rub.</p>
+        <div class="meta-row">
+          <span class="price">₹390</span>
+          <span class="divider"></span>
+          <span class="rating">⭐ 4.9</span>
+          <span class="divider"></span>
+          <span class="del-time">🕐 20 min</span>
+          <button class="add-btn" aria-label="Add to cart">+</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="section" id="streetfood">
+  <div class="section-head">
+    <div>
+      <h2 class="section-title">Charcoal Rolls & Street Chaat</h2>
+      <span class="eyebrow">Iconic city classics with fiery soul</span>
+    </div>
+    <span class="dish-count-badge">4 dishes</span>
+  </div>
+  <div class="menu-grid">
+
+    <div class="dish-card veg-card" data-name="Dilli Wali Gol Gappa" data-price="99" data-rating="4.9" data-time="10" data-veg="true" data-category="streetfood">
+      <div class="img-box img-rel">
+        <img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?w=600&q=80&auto=format&fit=crop" alt="Gol Gappa" loading="lazy" />
+        <span class="dish-badge veg-badge">Pure Veg</span>
+      </div>
+      <div class="dish-body">
+        <h3 class="dish-name"><span class="dish-dot veg"></span>Dilli Wali Gol Gappa</h3>
+        <p class="dish-desc">8 crisp semolina puris packed with spiced potato-chickpea mash, served with chilled spicy mint and sweet tamarind pani.</p>
+        <div class="meta-row">
+          <span class="price">₹99</span>
+          <span class="divider"></span>
+          <span class="rating">⭐ 4.9</span>
+          <span class="divider"></span>
+          <span class="del-time">🕐 10 min</span>
+          <button class="add-btn" aria-label="Add to cart">+</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="dish-card nonveg-card" data-name="Kolkata Egg Kathi Roll" data-price="169" data-rating="4.8" data-time="14" data-veg="false" data-category="streetfood">
+      <div class="img-box img-rel">
+        <img src="https://images.unsplash.com/photo-1509722747041-616f39b57569?w=600&q=80&auto=format&fit=crop" alt="Egg Kathi Roll" loading="lazy" />
+        <span class="dish-badge nonveg-badge">Non-Veg</span>
+      </div>
+      <div class="dish-body">
+        <h3 class="dish-name"><span class="dish-dot nonveg"></span>Kolkata Egg Kathi Roll</h3>
+        <p class="dish-desc">Layered flaky paratha lined with double egg, filled with spiced crunchy onions, green chillies, and kasundi mustard.</p>
+        <div class="meta-row">
+          <span class="price">₹169</span>
+          <span class="divider"></span>
+          <span class="rating">⭐ 4.8</span>
+          <span class="divider"></span>
+          <span class="del-time">🕐 14 min</span>
+          <button class="add-btn" aria-label="Add to cart">+</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="dish-card veg-card" data-name="Samosa Chaat Bomb" data-price="129" data-rating="4.7" data-time="12" data-veg="true" data-category="streetfood">
+      <div class="img-box img-rel">
+        <img src="https://images.unsplash.com/photo-1601050690117-94f5f6fa8bd7?w=600&q=80&auto=format&fit=crop" alt="Samosa Chaat" loading="lazy" />
+        <span class="dish-badge veg-badge">Pure Veg</span>
+      </div>
+      <div class="dish-body">
+        <h3 class="dish-name"><span class="dish-dot veg"></span>Samosa Chaat Bomb</h3>
+        <p class="dish-desc">Crushed golden potato samosas bathed in spiced chole, sweetened beaten curd, tamarind glaze, and nylon sev.</p>
+        <div class="meta-row">
+          <span class="price">₹129</span>
+          <span class="divider"></span>
+          <span class="rating">⭐ 4.7</span>
+          <span class="divider"></span>
+          <span class="del-time">🕐 12 min</span>
+          <button class="add-btn" aria-label="Add to cart">+</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="dish-card nonveg-card" data-name="Mumbai Chicken Frankie" data-price="219" data-rating="4.8" data-time="16" data-veg="false" data-category="streetfood">
+      <div class="img-box img-rel">
+        <img src="https://images.unsplash.com/photo-1648838779951-1b20dfa77fe8?w=600&q=80&auto=format&fit=crop" alt="Chicken Frankie" loading="lazy" />
+        <span class="dish-badge nonveg-badge">Non-Veg</span>
+      </div>
+      <div class="dish-body">
+        <h3 class="dish-name"><span class="dish-dot nonveg"></span>Mumbai Chicken Frankie</h3>
+        <p class="dish-desc">Warm griddled roti wrapped around juicy spiced tawa chicken, pickled chillies, crunchy onions, and chatpata masala.</p>
+        <div class="meta-row">
+          <span class="price">₹219</span>
+          <span class="divider"></span>
+          <span class="rating">⭐ 4.8</span>
+          <span class="divider"></span>
+          <span class="del-time">🕐 16 min</span>
+          <button class="add-btn" aria-label="Add to cart">+</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="section section-alt" id="healthy">
+  <div class="section-head">
+    <div>
+      <h2 class="section-title">Artisan Bowls, Avocado & Greens</h2>
+      <span class="eyebrow">Clean, wholesome & vibrant fuel</span>
+    </div>
+    <span class="dish-count-badge">4 dishes</span>
+  </div>
+  <div class="menu-grid">
+
+    <div class="dish-card veg-card" data-name="Rainbow Buddha Bowl" data-price="310" data-rating="4.7" data-time="15" data-veg="true" data-category="healthy">
+      <div class="img-box img-rel">
+        <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=600&q=80&auto=format&fit=crop" alt="Buddha Bowl" loading="lazy" />
+        <span class="dish-badge veg-badge">Pure Veg</span>
+      </div>
+      <div class="dish-body">
+        <h3 class="dish-name"><span class="dish-dot veg"></span>Rainbow Buddha Bowl</h3>
+        <p class="dish-desc">Quinoa base topped with hass avocado, roasted chickpeas, heirloom tomatoes, pickled beets, and tahini dressing.</p>
+        <div class="meta-row">
+          <span class="price">₹310</span>
+          <span class="divider"></span>
+          <span class="rating">⭐ 4.7</span>
+          <span class="divider"></span>
+          <span class="del-time">🕐 15 min</span>
+          <button class="add-btn" aria-label="Add to cart">+</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="dish-card nonveg-card" data-name="Grilled Chicken Power Bowl" data-price="360" data-rating="4.8" data-time="18" data-veg="false" data-category="healthy">
+      <div class="img-box img-rel">
+        <img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=600&q=80&auto=format&fit=crop" alt="Chicken Power Bowl" loading="lazy" />
+        <span class="dish-badge nonveg-badge">Non-Veg</span>
+      </div>
+      <div class="dish-body">
+        <h3 class="dish-name"><span class="dish-dot nonveg"></span>Grilled Chicken Power Bowl</h3>
+        <p class="dish-desc">Herb-charred chicken breast strips over brown basmati, grilled peppers, charred corn, avocado, and lime vinaigrette.</p>
+        <div class="meta-row">
+          <span class="price">₹360</span>
+          <span class="divider"></span>
+          <span class="rating">⭐ 4.8</span>
+          <span class="divider"></span>
+          <span class="del-time">🕐 18 min</span>
+          <button class="add-btn" aria-label="Add to cart">+</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="dish-card veg-card" data-name="Superfood Açaí Berry Bowl" data-price="340" data-rating="4.8" data-time="12" data-veg="true" data-category="healthy">
+      <div class="img-box img-rel">
+        <img src="https://images.unsplash.com/photo-1590301157890-4810ed352733?w=600&q=80&auto=format&fit=crop" alt="Acai Bowl" loading="lazy" />
+        <span class="dish-badge veg-badge">Pure Veg</span>
+      </div>
+      <div class="dish-body">
+        <h3 class="dish-name"><span class="dish-dot veg"></span>Superfood Açaí Berry Bowl</h3>
+        <p class="dish-desc">Frozen organic açaí blended with banana, topped with chia seeds, house coconut granola, kiwi, and raw forest honey.</p>
+        <div class="meta-row">
+          <span class="price">₹340</span>
+          <span class="divider"></span>
+          <span class="rating">⭐ 4.8</span>
+          <span class="divider"></span>
+          <span class="del-time">🕐 12 min</span>
+          <button class="add-btn" aria-label="Add to cart">+</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="dish-card veg-card" data-name="Smashed Avocado Sourdough Toast" data-price="280" data-rating="4.7" data-time="14" data-veg="true" data-category="healthy">
+      <div class="img-box img-rel">
+        <img src="https://images.unsplash.com/photo-1588137378633-dea1336ce1e2?w=600&q=80&auto=format&fit=crop" alt="Avocado Toast" loading="lazy" />
+        <span class="dish-badge veg-badge">Pure Veg</span>
+      </div>
+      <div class="dish-body">
+        <h3 class="dish-name"><span class="dish-dot veg"></span>Smashed Avocado Sourdough Toast</h3>
+        <p class="dish-desc">Thick-cut woodfired sourdough bread topped with creamy smashed hass avocado, Danish feta, chili flakes, and microgreens.</p>
+        <div class="meta-row">
+          <span class="price">₹280</span>
+          <span class="divider"></span>
+          <span class="rating">⭐ 4.7</span>
+          <span class="divider"></span>
+          <span class="del-time">🕐 14 min</span>
+          <button class="add-btn" aria-label="Add to cart">+</button>
+        </div>
       </div>
     </div>
 
@@ -301,46 +848,92 @@
 
 <section class="section" id="desserts">
   <div class="section-head">
-    <h2 class="section-title">Desserts & Shakes</h2>
-    <span class="eyebrow">Sweet endings</span>
+    <div>
+      <h2 class="section-title">Craft Shakes, Gelatos & Desserts</h2>
+      <span class="eyebrow">Decadent indulgence to seal the feast</span>
+    </div>
+    <span class="dish-count-badge">5 dishes</span>
   </div>
   <div class="menu-grid">
 
-    <div class="dish-card">
-      <div class="img-box"><img src="https://images.unsplash.com/photo-1551024601-bec78aea704b?w=600&q=80&auto=format&fit=crop" alt="Cheesecake" loading="lazy" /></div>
+    <div class="dish-card veg-card" data-name="Charred Basque Cheesecake" data-price="260" data-rating="4.9" data-time="10" data-veg="true" data-category="desserts">
+      <div class="img-box img-rel">
+        <img src="https://images.unsplash.com/photo-1533134242443-d4fd215305ad?w=600&q=80&auto=format&fit=crop" alt="Basque Cheesecake" loading="lazy" />
+        <span class="dish-tag">Signature Sweet</span>
+        <span class="dish-badge veg-badge">Pure Veg</span>
+      </div>
       <div class="dish-body">
         <h3 class="dish-name"><span class="dish-dot veg"></span>Charred Basque Cheesecake</h3>
-        <p class="dish-desc">Caramelised burnt exterior with molten creamy center and wild berry compote.</p>
-        <div class="meta-row"><span class="price">₹249</span><span class="divider"></span><span class="rating">⭐ 4.9</span><button class="add-btn">+</button></div>
+        <p class="dish-desc">Ultra creamy interior with a deeply caramelized dark burnished crust, baked at high heat for maximum richness.</p>
+        <div class="meta-row">
+          <span class="price">₹260</span>
+          <span class="divider"></span>
+          <span class="rating">⭐ 4.9</span>
+          <span class="divider"></span>
+          <span class="del-time">🕐 10 min</span>
+          <button class="add-btn" aria-label="Add to cart">+</button>
+        </div>
       </div>
     </div>
 
-    <div class="dish-card">
-      <div class="img-box"><img src="https://images.unsplash.com/photo-1572490122747-3968b75cc699?w=600&q=80&auto=format&fit=crop" alt="Chocolate Shake" loading="lazy" /></div>
+    <div class="dish-card veg-card" data-name="Dark Ember Chocolate Shake" data-price="220" data-rating="4.8" data-time="10" data-veg="true" data-category="desserts">
+      <div class="img-box img-rel">
+        <img src="https://images.unsplash.com/photo-1572490122747-3968b75cc699?w=600&q=80&auto=format&fit=crop" alt="Chocolate Shake" loading="lazy" />
+        <span class="dish-badge veg-badge">Pure Veg</span>
+      </div>
       <div class="dish-body">
         <h3 class="dish-name"><span class="dish-dot veg"></span>Dark Ember Chocolate Shake</h3>
-        <p class="dish-desc">70% single origin cocoa blended with artisanal vanilla gelato and roasted hazelnut.</p>
-        <div class="meta-row"><span class="price">₹199</span><span class="divider"></span><span class="rating">⭐ 4.8</span><button class="add-btn">+</button></div>
+        <p class="dish-desc">70% single-origin Belgian dark chocolate blended with whole milk and artisanal cocoa, topped with dark chocolate shards.</p>
+        <div class="meta-row">
+          <span class="price">₹220</span>
+          <span class="divider"></span>
+          <span class="rating">⭐ 4.8</span>
+          <span class="divider"></span>
+          <span class="del-time">🕐 10 min</span>
+          <button class="add-btn" aria-label="Add to cart">+</button>
+        </div>
       </div>
     </div>
 
-    <div class="dish-card">
-      <div class="img-box"><img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?w=600&q=80&auto=format&fit=crop" alt="Shahi Tukda" loading="lazy" /></div>
+    <div class="dish-card veg-card" data-name="Royal Shahi Rabri Tukda" data-price="180" data-rating="4.8" data-time="12" data-veg="true" data-category="desserts">
+      <div class="img-box img-rel">
+        <img src="https://images.unsplash.com/photo-1589301760014-d929f3979dbc?w=600&q=80&auto=format&fit=crop" alt="Shahi Tukda" loading="lazy" />
+        <span class="dish-badge veg-badge">Pure Veg</span>
+      </div>
       <div class="dish-body">
-        <h3 class="dish-name"><span class="dish-dot veg"></span>Smoked Shahi Tukda</h3>
-        <p class="dish-desc">Ghee-fried brioche soaked in saffron syrup, topped with rabri and silver leaf.</p>
-        <div class="meta-row"><span class="price">₹219</span><span class="divider"></span><span class="rating">⭐ 4.9</span><button class="add-btn">+</button></div>
+        <h3 class="dish-name"><span class="dish-dot veg"></span>Royal Shahi Rabri Tukda</h3>
+        <p class="dish-desc">Crisp ghee-fried milk bread soaked in fragrant saffron syrup, drowned in thick cardamom rabri and toasted pistachios.</p>
+        <div class="meta-row">
+          <span class="price">₹180</span>
+          <span class="divider"></span>
+          <span class="rating">⭐ 4.8</span>
+          <span class="divider"></span>
+          <span class="del-time">🕐 12 min</span>
+          <button class="add-btn" aria-label="Add to cart">+</button>
+        </div>
       </div>
     </div>
 
-    <div class="dish-card">
-      <div class="img-box"><img src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?w=600&q=80&auto=format&fit=crop" alt="Hot Sizzling Brownie" loading="lazy" /></div>
+    <div class="dish-card veg-card" data-name="Sizzling Molten Fudge Brownie" data-price="240" data-rating="4.9" data-time="12" data-veg="true" data-category="desserts">
+      <div class="img-box img-rel">
+        <img src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?w=600&q=80&auto=format&fit=crop" alt="Molten Fudge Brownie" loading="lazy" />
+        <span class="dish-badge veg-badge">Pure Veg</span>
+      </div>
       <div class="dish-body">
-        <h3 class="dish-name"><span class="dish-dot veg"></span>Sizzling Fudge Brownie</h3>
-        <p class="dish-desc">Warm Belgian chocolate walnut brownie served sizzling with vanilla bean gelato.</p>
-        <div class="meta-row"><span class="price">₹239</span><span class="divider"></span><span class="rating">⭐ 4.9</span><button class="add-btn">+</button></div>
+        <h3 class="dish-name"><span class="dish-dot veg"></span>Sizzling Molten Fudge Brownie</h3>
+        <p class="dish-desc">Warm gooey walnut fudge brownie served on a cast iron sizzler with vanilla bean gelato and hot chocolate fudge.</p>
+        <div class="meta-row">
+          <span class="price">₹240</span>
+          <span class="divider"></span>
+          <span class="rating">⭐ 4.9</span>
+          <span class="divider"></span>
+          <span class="del-time">🕐 12 min</span>
+          <button class="add-btn" aria-label="Add to cart">+</button>
+        </div>
       </div>
     </div>
+
+
 
   </div>
 </section>
@@ -362,72 +955,8 @@
     <p>© 2026 Ember Technologies Inc. All rights reserved.</p>
     <div class="legal-links"><a href="#">Privacy</a><a href="#">Terms</a><a href="#">Cookies</a></div>
   </div>
+</footer>
 
-<style>
-  #cartCheck:checked ~ label.cart-backdrop-overlay { opacity: 1 !important; pointer-events: auto !important; }
-  #cartCheck:checked ~ div.cart-drawer-box { right: 0 !important; }
-</style>
-
-<label for="cartCheck" class="cart-backdrop-overlay" style="position: fixed; inset: 0; background: rgba(0, 0, 0, 0.6); backdrop-filter: blur(4px); z-index: 9998; opacity: 0; pointer-events: none; transition: opacity 0.3s ease;"></label>
-
-<div class="cart-drawer-box" style="position: fixed; top: 0; right: -450px; width: 100%; max-width: 420px; height: 100vh; background: var(--card, #1A1512); border-left: 1px solid var(--border, #2A241F); z-index: 9999; display: flex; flex-direction: column; justify-content: space-between; padding: 24px; transition: right 0.35s cubic-bezier(0.4, 0, 0.2, 1); box-shadow: -10px 0 35px rgba(0,0,0,0.6); color: var(--text, #F4EDE4);">
-
-  <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border, #2A241F); padding-bottom: 16px;">
-    <div style="display: flex; align-items: center; gap: 10px;">
-      <span style="font-size: 22px;">🛒</span>
-      <h3 style="font-family: 'Fraunces', serif; font-size: 20px; font-weight: 700; margin: 0; color: var(--text, #F4EDE4);">Your Ember Order</h3>
-      <span style="background: rgba(217, 102, 44, 0.15); border: 1px solid #D9662C; color: #D9662C; font-size: 11px; font-weight: 700; padding: 2px 8px; border-radius: 12px;">2 Items</span>
-    </div>
-    <label for="cartCheck" style="font-size: 18px; cursor: pointer; color: var(--muted, #8C8175); width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; background: var(--input-bg, #0E0C0B); border: 1px solid var(--border, #2A241F);">✕</label>
-  </div>
-
-  <div style="flex: 1; overflow-y: auto; margin: 16px 0; padding-right: 4px;">
-
-    <div style="background: var(--surface, #14100E); border: 1px solid var(--border, #2A241F); border-radius: 8px; padding: 14px; display: flex; gap: 12px; align-items: center; margin-bottom: 12px;">
-      <img src="https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=120&q=80&auto=format&fit=crop" style="width: 56px; height: 56px; border-radius: 6px; object-fit: cover;" alt="Biryani" />
-      <div style="flex: 1;">
-        <h4 style="font-size: 14px; font-weight: 600; margin: 0 0 4px 0; color: var(--text, #F4EDE4);">Chicken Dum Biryani</h4>
-        <div style="font-size: 13px; font-weight: 700; color: #D9662C;">₹349</div>
-      </div>
-      <div style="display: flex; align-items: center; gap: 8px; background: var(--input-bg, #0E0C0B); border: 1px solid var(--border, #2A241F); padding: 4px 8px; border-radius: 20px;">
-        <button style="background: none; border: none; color: var(--text, #F4EDE4); font-size: 14px; cursor: pointer; padding: 0 4px;">-</button>
-        <span style="font-size: 13px; font-weight: 600; color: var(--text, #F4EDE4);">1</span>
-        <button style="background: none; border: none; color: var(--text, #F4EDE4); font-size: 14px; cursor: pointer; padding: 0 4px;">+</button>
-      </div>
-    </div>
-
-    <div style="background: var(--surface, #14100E); border: 1px solid var(--border, #2A241F); border-radius: 8px; padding: 14px; display: flex; gap: 12px; align-items: center; margin-bottom: 12px;">
-      <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?w=120&q=80&auto=format&fit=crop" style="width: 56px; height: 56px; border-radius: 6px; object-fit: cover;" alt="Pizza" />
-      <div style="flex: 1;">
-        <h4 style="font-size: 14px; font-weight: 600; margin: 0 0 4px 0; color: var(--text, #F4EDE4);">Wood-fired Margherita</h4>
-        <div style="font-size: 13px; font-weight: 700; color: #D9662C;">₹399</div>
-      </div>
-      <div style="display: flex; align-items: center; gap: 8px; background: var(--input-bg, #0E0C0B); border: 1px solid var(--border, #2A241F); padding: 4px 8px; border-radius: 20px;">
-        <button style="background: none; border: none; color: var(--text, #F4EDE4); font-size: 14px; cursor: pointer; padding: 0 4px;">-</button>
-        <span style="font-size: 13px; font-weight: 600; color: var(--text, #F4EDE4);">1</span>
-        <button style="background: none; border: none; color: var(--text, #F4EDE4); font-size: 14px; cursor: pointer; padding: 0 4px;">+</button>
-      </div>
-    </div>
-
-    <div style="background: rgba(217, 102, 44, 0.08); border: 1px dashed #D9662C; border-radius: 8px; padding: 12px 14px; display: flex; justify-content: space-between; align-items: center;">
-      <div>
-        <span style="font-size: 10px; font-weight: 700; letter-spacing: 1px; color: #D9662C; text-transform: uppercase;">Applied Coupon</span>
-        <div style="font-size: 13px; font-weight: 700; color: var(--text, #F4EDE4);">EMBER40 (40% OFF)</div>
-      </div>
-      <span style="font-size: 12px; font-weight: 700; color: #4caf50;">Saved ₹200</span>
-    </div>
-
-  </div>
-
-  <div style="border-top: 1px solid var(--border, #2A241F); padding-top: 16px;">
-    <div style="display: flex; justify-content: space-between; font-size: 13px; color: var(--muted, #8C8175); margin-bottom: 6px;"><span>Item Subtotal</span><span>₹748</span></div>
-    <div style="display: flex; justify-content: space-between; font-size: 13px; color: #4caf50; margin-bottom: 6px;"><span>Coupon Savings (EMBER40)</span><span>-₹200</span></div>
-    <div style="display: flex; justify-content: space-between; font-size: 13px; color: var(--muted, #8C8175); margin-bottom: 12px;"><span>Delivery Fee</span><span style="color: #4caf50; font-weight: 600;">FREE</span></div>
-    <div style="display: flex; justify-content: space-between; font-size: 18px; font-weight: 900; font-family: 'Fraunces', serif; color: var(--text, #F4EDE4); border-top: 1px solid var(--border, #2A241F); padding-top: 10px; margin-bottom: 16px;"><span>Final Amount</span><span>₹548</span></div>
-    <a href="profile.html#orders" style="display: block; text-align: center; background: #D9662C; color: #FFFFFF; font-weight: 700; padding: 14px; border-radius: 8px; text-decoration: none; font-size: 14px; box-shadow: 0 6px 20px rgba(217,102,44,0.4);">Proceed to Pay (₹548) →</a>
-  </div>
-
-</div>
-
+<script src="main.js"></script>
 </body>
 </html>

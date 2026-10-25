@@ -11,7 +11,7 @@
 </head>
 <body class="auth-page">
 
-<input type="checkbox" class="theme-check" />
+<input type="checkbox" id="themeCheck" class="theme-check" />
 
 <div class="auth-page-split">
 
@@ -31,7 +31,7 @@
       <h2>Create Account</h2>
       <p class="auth-sub">Join the Flame Club and get 50% OFF on your first order.</p>
 
-      <form action="login.html" method="get">
+      <form id="signupForm" action="login.html" method="get" novalidate>
         <div class="mb-3">
           <label class="form-label" for="name">Full Name</label>
           <input type="text" class="form-control" id="name" placeholder="Full Name" required />
@@ -68,5 +68,7 @@
 
 </div>
 
+
+<script src="main.js"></script>
 </body>
 </html>
